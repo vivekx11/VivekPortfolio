@@ -42,40 +42,142 @@
       font-family: 'Inter', sans-serif;
     }
 
+    /* Dark Mode (Default) */
     body {
       background: radial-gradient(circle at top left, #000000 0, #1a1a1a 40%, #000 100%);
       color: #f9fafb;
       overflow-x: hidden;
+      transition: background 0.3s ease, color 0.3s ease;
     }
+
+    /* Light Mode - COMMENTED OUT
+    body.light-mode {
+      background: radial-gradient(circle at top left, #ffffff 0, #f0f9ff 40%, #e0f2fe 100%);
+      color: #000000;
+    }
+
+    body.light-mode .text-slate-100,
+    body.light-mode .text-slate-200,
+    body.light-mode .text-slate-300 {
+      color: #000000 !important;
+    }
+
+    body.light-mode .text-slate-400,
+    body.light-mode .text-slate-500 {
+      color: #1f2937 !important;
+    }
+
+    body.light-mode .text-slate-600,
+    body.light-mode .text-slate-700 {
+      color: #374151 !important;
+    }
+
+    body.light-mode .bg-slate-900,
+    body.light-mode .bg-slate-800 {
+      background-color: #f3f4f6 !important;
+    }
+
+    body.light-mode .border-slate-600,
+    body.light-mode .border-slate-700 {
+      border-color: #d1d5db !important;
+    }
+
+    body.light-mode .border-slate-500 {
+      border-color: #9ca3af !important;
+    }
+    */
+
+    /* Theme Toggle Button - COMMENTED OUT
+    .theme-toggle {
+      position: fixed;
+      top: 6.5rem;
+      right: 2rem;
+      z-index: 1000;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: rgba(6, 182, 212, 0.2);
+      border: 2px solid rgba(6, 182, 212, 0.5);
+      backdrop-filter: blur(12px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .theme-toggle:hover {
+      transform: scale(1.1);
+      background: rgba(6, 182, 212, 0.3);
+      box-shadow: 0 6px 30px rgba(6, 182, 212, 0.4);
+    }
+
+    .theme-toggle i {
+      font-size: 20px;
+      color: #06b6d4;
+      transition: transform 0.3s ease;
+    }
+
+    body.light-mode .theme-toggle {
+      background: rgba(6, 182, 212, 0.15);
+      border: 2px solid rgba(6, 182, 212, 0.4);
+    }
+
+    @media (max-width: 768px) {
+      .theme-toggle {
+        top: 5rem;
+        right: 1rem;
+        width: 45px;
+        height: 45px;
+      }
+    }
+    */
 
     /* Glassmorphism cards */
     .glass-card {
-      background: radial-gradient(circle at top left, rgba(234, 179, 8, 0.04), rgba(26, 26, 26, 0.85));
-      border: 1px solid rgba(234, 179, 8, 0.25);
+      background: radial-gradient(circle at top left, rgba(6, 182, 212, 0.04), rgba(26, 26, 26, 0.85));
+      border: 1px solid rgba(6, 182, 212, 0.25);
       box-shadow: 0 24px 60px rgba(0, 0, 0, 0.8);
     }
 
+    /* Light Mode - COMMENTED OUT
+    body.light-mode .glass-card {
+      background: radial-gradient(circle at top left, rgba(6, 182, 212, 0.08), rgba(255, 255, 255, 0.95));
+      border: 1px solid rgba(6, 182, 212, 0.3);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.1);
+    }
+    */
+
     .gradient-text {
-      background: linear-gradient(135deg, #eab308, #fbbf24);
+      background: linear-gradient(135deg, #06b6d4, #22d3ee);
       -webkit-background-clip: text;
       background-clip: text;
       -webkit-text-fill-color: transparent;
     }
 
     .nav-blur {
-      background: radial-gradient(circle at top left, rgba(0, 0, 0, 0.95), rgba(234, 179, 8, 0.2));
+      background: radial-gradient(circle at top left, rgba(0, 0, 0, 0.95), rgba(6, 182, 212, 0.2));
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
-      border: 1px solid rgba(234, 179, 8, 0.5);
+      border: 1px solid rgba(6, 182, 212, 0.5);
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
     }
+
+    /* Light Mode - COMMENTED OUT
+    body.light-mode .nav-blur {
+      background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.95), rgba(6, 182, 212, 0.15));
+      border: 1px solid rgba(6, 182, 212, 0.4);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+    */
 
     /* Cursor */
     .cursor {
       position: fixed;
       width: 24px;
       height: 24px;
-      background: #eab308;
+      background: #06b6d4;
       border-radius: 999px;
       pointer-events: none;
       mix-blend-mode: difference;
@@ -87,7 +189,7 @@
       width: 60px;
       height: 60px;
       border-radius: 999px;
-      border: 2px solid #fbbf24;
+      border: 2px solid #22d3ee;
       pointer-events: none;
       z-index: 9998;
       opacity: 0.45;
@@ -149,7 +251,7 @@
     .section-divider {
       height: 1px;
       width: 100%;
-      background: linear-gradient(to right, transparent, rgba(234, 179, 8, 0.5), transparent);
+      background: linear-gradient(to right, transparent, rgba(6, 182, 212, 0.5), transparent);
       opacity: 0.5;
     }
 
@@ -171,7 +273,7 @@
       transform: translateX(-50%);
       width: 3px;
       height: 100%;
-      background: linear-gradient(to bottom, rgba(234, 179, 8, 0.2), rgba(250, 204, 21, 0.8), rgba(234, 179, 8, 0.2));
+      background: linear-gradient(to bottom, rgba(6, 182, 212, 0.2), rgba(34, 211, 238, 0.8), rgba(6, 182, 212, 0.2));
     }
 
     @media (min-width: 769px) {
@@ -184,8 +286,8 @@
         height: 20px;
         border-radius: 999px;
         background: #ffffff;
-        border: 3px solid #eab308;
-        box-shadow: 0 0 0 3px rgba(234, 179, 8, 0.3), 0 0 20px rgba(234, 179, 8, 0.6);
+        border: 3px solid #06b6d4;
+        box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.3), 0 0 20px rgba(6, 182, 212, 0.6);
         z-index: 10;
       }
 
@@ -198,8 +300,8 @@
         height: 20px;
         border-radius: 999px;
         background: #ffffff;
-        border: 3px solid #eab308;
-        box-shadow: 0 0 0 3px rgba(234, 179, 8, 0.3), 0 0 20px rgba(234, 179, 8, 0.6);
+        border: 3px solid #06b6d4;
+        box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.3), 0 0 20px rgba(6, 182, 212, 0.6);
         z-index: 10;
       }
 
@@ -212,8 +314,8 @@
         height: 20px;
         border-radius: 999px;
         background: #ffffff;
-        border: 3px solid #eab308;
-        box-shadow: 0 0 0 3px rgba(234, 179, 8, 0.3), 0 0 20px rgba(234, 179, 8, 0.6);
+        border: 3px solid #06b6d4;
+        box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.3), 0 0 20px rgba(6, 182, 212, 0.6);
         z-index: 10;
       }
 
@@ -226,8 +328,8 @@
         height: 20px;
         border-radius: 999px;
         background: #ffffff;
-        border: 3px solid #eab308;
-        box-shadow: 0 0 0 3px rgba(234, 179, 8, 0.3), 0 0 20px rgba(234, 179, 8, 0.6);
+        border: 3px solid #06b6d4;
+        box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.3), 0 0 20px rgba(6, 182, 212, 0.6);
         z-index: 10;
       }
     }
@@ -247,8 +349,8 @@
         height: 18px;
         border-radius: 999px;
         background: #ffffff;
-        border: 3px solid #eab308;
-        box-shadow: 0 0 10px rgba(234, 179, 8, 0.5);
+        border: 3px solid #06b6d4;
+        box-shadow: 0 0 10px rgba(6, 182, 212, 0.5);
         z-index: 10;
       }
 
@@ -266,15 +368,23 @@
     /* Tech card with rotating border effect */
     .tech-card {
       position: relative;
-      background: radial-gradient(circle at top left, rgba(234, 179, 8, 0.06), rgba(26, 26, 26, 0.9));
-      border: 1px solid rgba(234, 179, 8, 0.3);
+      background: radial-gradient(circle at top left, rgba(6, 182, 212, 0.06), rgba(26, 26, 26, 0.9));
+      border: 1px solid rgba(6, 182, 212, 0.3);
       box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
       overflow: hidden;
     }
 
+    /* Light Mode - COMMENTED OUT
+    body.light-mode .tech-card {
+      background: radial-gradient(circle at top left, rgba(6, 182, 212, 0.1), rgba(255, 255, 255, 0.95));
+      border: 1px solid rgba(6, 182, 212, 0.35);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+    }
+    */
+
     /* Icon glow */
     .icon-glow {
-      box-shadow: 0 0 25px rgba(234, 179, 8, 0.4);
+      box-shadow: 0 0 25px rgba(6, 182, 212, 0.4);
     }
 
     /* Popular badge pulse */
@@ -282,11 +392,11 @@
 
       0%,
       100% {
-        box-shadow: 0 0 15px rgba(234, 179, 8, 0.4);
+        box-shadow: 0 0 15px rgba(6, 182, 212, 0.4);
       }
 
       50% {
-        box-shadow: 0 0 25px rgba(234, 179, 8, 0.7);
+        box-shadow: 0 0 25px rgba(6, 182, 212, 0.7);
       }
     }
 
@@ -297,37 +407,80 @@
     /* Blog card */
     .blog-card {
       background: rgba(26, 26, 26, 0.9);
-      border: 1px solid rgba(234, 179, 8, 0.35);
+      border: 1px solid rgba(6, 182, 212, 0.35);
       box-shadow: 0 22px 60px rgba(0, 0, 0, 0.9);
     }
 
+    /* Light Mode - COMMENTED OUT
+    body.light-mode .blog-card {
+      background: rgba(255, 255, 255, 0.95);
+      border: 1px solid rgba(6, 182, 212, 0.35);
+      box-shadow: 0 22px 60px rgba(0, 0, 0, 0.08);
+    }
+    */
+
     /* Testimonial card */
     .testimonial-card {
-      background: radial-gradient(circle at top left, rgba(234, 179, 8, 0.1), rgba(26, 26, 26, 0.95));
-      border: 1px solid rgba(250, 204, 21, 0.4);
+      background: radial-gradient(circle at top left, rgba(6, 182, 212, 0.1), rgba(26, 26, 26, 0.95));
+      border: 1px solid rgba(34, 211, 238, 0.4);
       box-shadow: 0 20px 60px rgba(0, 0, 0, 0.9);
     }
+
+    /* Light Mode - COMMENTED OUT
+    body.light-mode .testimonial-card {
+      background: radial-gradient(circle at top left, rgba(6, 182, 212, 0.12), rgba(255, 255, 255, 0.95));
+      border: 1px solid rgba(34, 211, 238, 0.4);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+    }
+    */
 
     /* Contact form */
     .input-field {
       background: rgba(26, 26, 26, 0.9);
-      border: 1px solid rgba(234, 179, 8, 0.5);
+      border: 1px solid rgba(6, 182, 212, 0.5);
       border-radius: 0.75rem;
     }
 
+    /* Light Mode - COMMENTED OUT
+    body.light-mode .input-field {
+      background: rgba(255, 255, 255, 0.95);
+      border: 1px solid rgba(6, 182, 212, 0.5);
+      color: #000000;
+    }
+    */
+
     .input-field:focus {
       outline: none;
-      border-color: rgba(250, 204, 21, 0.9);
+      border-color: rgba(34, 211, 238, 0.9);
       background: rgba(26, 26, 26, 1);
-      box-shadow: 0 0 0 1px rgba(234, 179, 8, 0.7), 0 18px 45px rgba(234, 179, 8, 0.35);
+      box-shadow: 0 0 0 1px rgba(6, 182, 212, 0.7), 0 18px 45px rgba(6, 182, 212, 0.35);
     }
+
+    /* Light Mode - COMMENTED OUT
+    body.light-mode .input-field:focus {
+      background: rgba(255, 255, 255, 1);
+      box-shadow: 0 0 0 1px rgba(6, 182, 212, 0.7), 0 18px 45px rgba(6, 182, 212, 0.25);
+    }
+    */
 
     /* CTA button */
     .btn-primary {
-      background: linear-gradient(135deg, #eab308, #fbbf24, #fde047);
+      background: linear-gradient(135deg, #06b6d4, #22d3ee, #67e8f9);
       color: #000000;
-      box-shadow: 0 18px 45px rgba(234, 179, 8, 0.65);
+      box-shadow: 0 18px 45px rgba(6, 182, 212, 0.65);
     }
+
+    /* Project card */
+    .project-card {
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Light Mode - COMMENTED OUT
+    body.light-mode .project-card {
+      background: rgba(255, 255, 255, 0.95);
+    }
+    */
 
     /* Mobile menu animations */
     .menu-icon {
@@ -365,6 +518,13 @@
       padding: 60px 20px 20px;
       box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
     }
+
+    /* Light Mode - COMMENTED OUT
+    body.light-mode .mobile-menu-fullscreen {
+      background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 50%, #e0f2fe 100%);
+      box-shadow: -10px 0 30px rgba(0, 0, 0, 0.15);
+    }
+    */
 
     .mobile-menu-fullscreen.active {
       transform: translateX(0);
@@ -408,14 +568,14 @@
       width: 32px;
       height: 32px;
       border-radius: 8px;
-      background: rgba(234, 179, 8, 0.2);
-      border: 2px solid rgba(234, 179, 8, 0.6);
+      background: rgba(6, 182, 212, 0.2);
+      border: 2px solid rgba(6, 182, 212, 0.6);
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 11px;
       font-weight: bold;
-      color: #eab308;
+      color: #06b6d4;
     }
 
     .menu-brand-text {
@@ -424,6 +584,12 @@
       color: #f9fafb;
       letter-spacing: 0.15em;
     }
+
+    /* Light Mode - COMMENTED OUT
+    body.light-mode .menu-brand-text {
+      color: #000000;
+    }
+    */
 
     /* Close button */
     .menu-close {
@@ -440,6 +606,12 @@
       position: relative;
     }
 
+    /* Light Mode - COMMENTED OUT
+    body.light-mode .menu-close {
+      border: 2px solid rgba(148, 163, 184, 0.5);
+    }
+    */
+
 
 
     .menu-close::before,
@@ -451,6 +623,13 @@
       background: #e2e8f0;
       border-radius: 2px;
     }
+
+    /* Light Mode - COMMENTED OUT
+    body.light-mode .menu-close::before,
+    body.light-mode .menu-close::after {
+      background: #1f2937;
+    }
+    */
 
     .menu-close::before {
       transform: rotate(45deg);
@@ -479,14 +658,28 @@
       letter-spacing: 0.05em;
     }
 
+    /* Light Mode - COMMENTED OUT
+    body.light-mode .menu-items a {
+      color: #1f2937;
+      border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+    }
+    */
+
     .menu-items a.active {
-      color: #eab308;
+      color: #06b6d4;
       padding-left: 8px;
-      background: rgba(234, 179, 8, 0.05);
+      background: rgba(6, 182, 212, 0.05);
     }
 
+    /* Light Mode - COMMENTED OUT
+    body.light-mode .menu-items a.active {
+      color: #06b6d4;
+      background: rgba(6, 182, 212, 0.1);
+    }
+    */
+
     .menu-items a.contact-btn {
-      background: linear-gradient(135deg, #eab308, #fbbf24);
+      background: linear-gradient(135deg, #06b6d4, #22d3ee);
       color: #000000;
       text-align: center;
       border-radius: 12px;
@@ -506,10 +699,47 @@
         display: none;
       }
     }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid rgba(6, 182, 212, 0.3);
+      background: #000000;
+    }
+
+    /* Light Mode - COMMENTED OUT
+    body.light-mode footer {
+      border-top: 1px solid rgba(6, 182, 212, 0.3);
+      background: #ffffff;
+    }
+
+    body.light-mode footer .text-slate-100,
+    body.light-mode footer .text-slate-200 {
+      color: #000000 !important;
+    }
+
+    body.light-mode footer .text-slate-400,
+    body.light-mode footer .text-slate-500 {
+      color: #4b5563 !important;
+    }
+
+    body.light-mode footer .bg-slate-900 {
+      background-color: #f3f4f6 !important;
+    }
+
+    body.light-mode footer .border-slate-700 {
+      border-color: #d1d5db !important;
+    }
+    */
   </style>
 </head>
 
 <body class="relative">
+
+  <!-- Theme Toggle Button - COMMENTED OUT
+  <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+    <i class="fas fa-sun"></i>
+  </button>
+  -->
 
   <!-- Particles background -->
   <div id="particles-js"></div>
@@ -548,8 +778,8 @@
     <div class="nav-blur rounded-full px-6 py-3">
       <div class="flex items-center justify-between">
         <a href="#home" class="flex items-center gap-2">
-          <div class="w-8 h-8 rounded-xl bg-yellow-500/20 flex items-center justify-center border border-yellow-400/80">
-            <span class="text-yellow-300 text-xs font-bold">VS</span>
+          <div class="w-8 h-8 rounded-xl bg-cyan-500/20 flex items-center justify-center border border-cyan-400/80">
+            <span class="text-cyan-300 text-xs font-bold">VS</span>
           </div>
           <span class="text-lg md:text-xl font-semibold tracking-[0.22em] text-slate-200">VIVEK.S</span>
         </a>
@@ -563,7 +793,7 @@
           <a href="#blog" class="transition-colors">BLOG</a>
           <a href="#testimonials" class="transition-colors">TESTIMONIALS</a>
           <a href="#contact"
-            class="px-4 py-2 rounded-full text-xs font-semibold bg-yellow-500/10 border border-yellow-400/70">
+            class="px-4 py-2 rounded-full text-xs font-semibold bg-cyan-500/10 border border-cyan-400/70">
             CONTACT
           </a>
         </div>
@@ -587,7 +817,7 @@
     <div class="max-w-7xl mx-auto w-full grid lg:grid-cols-[1.5fr,1.1fr] gap-10 lg:gap-16 items-center">
       <!-- Text -->
       <div class="space-y-6 relative z-10">
-        <p class="section-label text-xs font-semibold text-yellow-300/80 tracking-[0.35em]">
+        <p class="section-label text-xs font-semibold text-cyan-300/80 tracking-[0.35em]">
           THE DEVELOPER
         </p>
         <h1 class="text-4xl md:text-6xl xl:text-7xl font-black leading-tight">
@@ -608,7 +838,7 @@
             View Projects
           </a>
           <a href="#contact"
-            class="px-7 py-3 rounded-full text-sm font-semibold border border-yellow-500/60 bg-yellow-500/5 text-yellow-100">
+            class="px-7 py-3 rounded-full text-sm font-semibold border border-cyan-500/60 bg-cyan-500/5 text-cyan-100">
             Hire Me
           </a>
           <a href="/resume.pdf" download
@@ -634,10 +864,10 @@
         </div>
 
         <div class="mt-4 flex flex-wrap items-center gap-3 text-[11px] text-slate-400">
-          <span class="px-3 py-1 rounded-full border border-yellow-500/40 bg-yellow-500/10">
+          <span class="px-3 py-1 rounded-full border border-cyan-500/40 bg-cyan-500/10">
             WEBSITE • FLUTTER APPLICATION • CHROME EXTENSIONS
           </span>
-          <span class="px-3 py-1 rounded-full border border-yellow-500/20 bg-slate-900/70">
+          <span class="px-3 py-1 rounded-full border border-cyan-500/20 bg-slate-900/70">
             Clean Code & Performance
           </span>
         </div>
@@ -648,15 +878,15 @@
         <div class="glass-card rounded-3xl p-6 md:p-7 w-full max-w-sm md:max-w-md">
           <div class="relative">
             <div
-              class="absolute inset-0 rounded-3xl bg-gradient-to-tr from-yellow-500/30 via-transparent to-amber-500/20 blur-3xl -z-10">
+              class="absolute inset-0 rounded-3xl bg-gradient-to-tr from-cyan-500/30 via-transparent to-cyan-500/20 blur-3xl -z-10">
             </div>
             <lottie-player src="Login.json" background="transparent" speed="1" loop autoplay
-              class="w-full max-w-md rounded-3xl border border-yellow-400/70"></lottie-player></lottie-player>
+              class="w-full max-w-md rounded-3xl border border-cyan-400/70"></lottie-player></lottie-player>
           </div>
           <div class="mt-4 space-y-3 text-sm">
             <div class="flex items-center justify-between">
-              <p class="font-semibold text-slate-100"> DEVELOPER </p>
-              <span class="px-2.5 py-1 rounded-full text-[11px] bg-yellow-500/15 border border-yellow-400/60 text-yellow-200">
+              <p class="font-semibold gradient-text" id="greetingMessage">GOOD MORNING</p>
+              <span class="px-2.5 py-1 rounded-full text-[11px] bg-cyan-500/15 border border-cyan-400/60 text-cyan-200">
                 Available for work
               </span>
             </div>
@@ -685,7 +915,7 @@
   <section id="about" class="py-20 px-4">
     <div class="max-w-7xl mx-auto space-y-10">
       <div class="text-center space-y-3">
-        <p class="section-label text-base md:text-lg font-semibold text-yellow-300/80 tracking-[0.3em">
+        <p class="section-label text-base md:text-lg font-semibold text-cyan-300/80 tracking-[0.3em">
           ABOUT
         </p>
         <h2 class="text-3xl md:text-4xl font-black">
@@ -700,7 +930,7 @@
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
         <div class="glass-card rounded-2xl p-6">
           
-          <h3 class="text-lg font-semibold mb-2 text-yellow-400">Identity</h3>
+          <h3 class="text-lg font-semibold mb-2 text-cyan-400">Identity</h3>
           <p class="text-sm text-slate-300">
             Developer crafting reliable solutions with an eye for detail and a <span
               class="font-semibold">user-first</span> mindset.
@@ -709,7 +939,7 @@
 
         <div class="glass-card rounded-2xl p-6">
           
-          <h3 class="text-lg font-semibold mb-2 text-yellow-400">Professional</h3>
+          <h3 class="text-lg font-semibold mb-2 text-cyan-400">Professional</h3>
           <p class="text-sm text-slate-300">
             Experience across frontend and backend: React, Node.js, SQL, PHP and clean REST API design.
           </p>
@@ -717,7 +947,7 @@
 
         <div class="glass-card rounded-2xl p-6">
           
-          <h3 class="text-lg font-semibold mb-2 text-yellow-400">Education</h3>
+          <h3 class="text-lg font-semibold mb-2 text-cyan-400">Education</h3>
           <p class="text-sm text-slate-300">
             BSc Computer Science from Mumbai University with a strong core in development, website flutter app & chrome extensions.
           </p>
@@ -725,7 +955,7 @@
 
         <div class="glass-card rounded-2xl p-6">
           
-          <h3 class="text-lg font-semibold mb-2 text-yellow-400">Interests</h3>
+          <h3 class="text-lg font-semibold mb-2 text-cyan-400">Interests</h3>
           <p class="text-sm text-slate-300">
             Gaming, travel and exploring new tech from UI patterns to <span class="font-semibold">AI-powered</span>
             tools.
@@ -741,7 +971,7 @@
 <section id="experience" class="py-20 px-4">
   <div class="max-w-7xl mx-auto space-y-12">
     <div class="text-center space-y-3">
-      <p class="section-label text-base md:text-lg font-semibold text-yellow-300/80 tracking-[0.3em]">
+      <p class="section-label text-base md:text-lg font-semibold text-cyan-300/80 tracking-[0.3em]">
         EXPERIENCE
       </p>
       <h2 class="text-3xl md:text-4xl font-black">
@@ -758,10 +988,10 @@
       <!-- 1 -->
       <div class="timeline-item relative md:w-1/2 md:pr-8 md:text-right mb-16">
         <div class="timeline-content glass-card rounded-2xl p-6 ml-10 md:ml-0">
-          <p class="text-xs uppercase tracking-[0.25em] text-yellow-300/80 mb-2">
+          <p class="text-xs uppercase tracking-[0.25em] text-cyan-300/80 mb-2">
             2026 – Present
           </p>
-          <h3 class="text-lg font-semibold text-yellow-300">Full Stack Developer</h3>
+          <h3 class="text-lg font-semibold text-cyan-300">Full Stack Developer</h3>
           <p class="text-xs text-slate-400 mb-2">TechCorp Inc.</p>
           <p class="text-sm text-slate-300">
             Built scalable React + Node.js features and optimised SQL queries.
@@ -772,10 +1002,10 @@
       <!-- 2 -->
       <div class="timeline-item relative md:w-1/2 md:ml-auto md:pl-8 md:text-left mb-16">
         <div class="timeline-content glass-card rounded-2xl p-6 ml-10 md:ml-0">
-          <p class="text-xs uppercase tracking-[0.25em] text-yellow-300/80 mb-2">
+          <p class="text-xs uppercase tracking-[0.25em] text-cyan-300/80 mb-2">
             2025
           </p>
-          <h3 class="text-lg font-semibold text-yellow-300">Web Development Intern</h3>
+          <h3 class="text-lg font-semibold text-cyan-300">Web Development Intern</h3>
           <p class="text-xs text-slate-400 mb-2">StartupX</p>
           <p class="text-sm text-slate-300">
             Built UI components and assisted in backend endpoints.
@@ -786,10 +1016,10 @@
       <!-- 3 -->
       <div class="timeline-item relative md:w-1/2 md:pr-8 md:text-right mb-16">
         <div class="timeline-content glass-card rounded-2xl p-6 ml-10 md:ml-0">
-          <p class="text-xs uppercase tracking-[0.25em] text-yellow-300/80 mb-2">
+          <p class="text-xs uppercase tracking-[0.25em] text-cyan-300/80 mb-2">
             2024
           </p>
-          <h3 class="text-lg font-semibold text-yellow-300">Frontend Projects</h3>
+          <h3 class="text-lg font-semibold text-cyan-300">Frontend Projects</h3>
           <p class="text-xs text-slate-400 mb-2">Personal Work</p>
           <p class="text-sm text-slate-300">
             Created responsive websites using HTML, CSS, and JavaScript.
@@ -800,10 +1030,10 @@
       <!-- 4 -->
       <div class="timeline-item relative md:w-1/2 md:ml-auto md:pl-8 md:text-left">
         <div class="timeline-content glass-card rounded-2xl p-6 ml-10 md:ml-0">
-          <p class="text-xs uppercase tracking-[0.25em] text-yellow-300/80 mb-2">
+          <p class="text-xs uppercase tracking-[0.25em] text-cyan-300/80 mb-2">
             2023
           </p>
-          <h3 class="text-lg font-semibold text-yellow-300">Programming Student</h3>
+          <h3 class="text-lg font-semibold text-cyan-300">Programming Student</h3>
           <p class="text-xs text-slate-400 mb-2">College</p>
           <p class="text-sm text-slate-300">
             Learned core programming concepts in C++, Java, and Python.
@@ -824,7 +1054,7 @@
 
       <!-- Header -->
       <div class="text-center space-y-4">
-        <p class="section-label text-xs font-semibold text-yellow-300/80 tracking-[0.35em]">
+        <p class="section-label text-xs font-semibold text-cyan-300/80 tracking-[0.35em]">
           TECHNOLOGY STACK
         </p>
         <h1 class="text-4xl md:text-5xl xl:text-6xl font-black leading-tight">
@@ -841,7 +1071,7 @@
       <section class="space-y-8">
         <div class="flex items-center justify-between">
           <div>
-            <p class="section-label text-base md:text-lg font-semibold text-yellow-300/80 tracking-[0.3em]">
+            <p class="section-label text-base md:text-lg font-semibold text-cyan-300/80 tracking-[0.3em]">
               FEATURED
             </p>
             <div class="flex items-center gap-3">
@@ -859,9 +1089,9 @@
           <div class="tech-card rounded-2xl p-6 relative">
             <div class="absolute top-3 right-3">
               <div
-                class="popular-badge flex items-center gap-1 px-2.5 py-1 bg-yellow-500/20 border border-yellow-500/40 rounded-full">
-                <i class="fas fa-star text-yellow-400 text-xs"></i>
-                <span class="text-xs text-yellow-400 font-semibold">Hot</span>
+                class="popular-badge flex items-center gap-1 px-2.5 py-1 bg-cyan-500/20 border border-cyan-500/40 rounded-full">
+                <i class="fas fa-star text-cyan-400 text-xs"></i>
+                <span class="text-xs text-cyan-400 font-semibold">Hot</span>
               </div>
             </div>
 
@@ -873,7 +1103,7 @@
               </div>
               <div class="flex-1 pt-1">
                 <h3 class="text-lg font-semibold text-slate-100 mb-1">Node.js</h3>
-                <p class="text-xs text-yellow-300/80 mb-2">Runtime</p>
+                <p class="text-xs text-cyan-300/80 mb-2">Runtime</p>
                 <p class="text-sm text-slate-300">JavaScript runtime built on Chrome's V8 engine</p>
               </div>
             </div>
@@ -883,9 +1113,9 @@
           <div class="tech-card rounded-2xl p-6 relative">
             <div class="absolute top-3 right-3">
               <div
-                class="popular-badge flex items-center gap-1 px-2.5 py-1 bg-yellow-500/20 border border-yellow-500/40 rounded-full">
-                <i class="fas fa-star text-yellow-400 text-xs"></i>
-                <span class="text-xs text-yellow-400 font-semibold">Hot</span>
+                class="popular-badge flex items-center gap-1 px-2.5 py-1 bg-cyan-500/20 border border-cyan-500/40 rounded-full">
+                <i class="fas fa-star text-cyan-400 text-xs"></i>
+                <span class="text-xs text-cyan-400 font-semibold">Hot</span>
               </div>
             </div>
 
@@ -897,7 +1127,7 @@
               </div>
               <div class="flex-1 pt-1">
                 <h3 class="text-lg font-semibold text-slate-100 mb-1">Flutter</h3>
-                <p class="text-xs text-yellow-300/80 mb-2">Framework</p>
+                <p class="text-xs text-cyan-300/80 mb-2">Framework</p>
                 <p class="text-sm text-slate-300">Google's UI toolkit for building natively compiled applications</p>
               </div>
             </div>
@@ -907,9 +1137,9 @@
           <div class="tech-card rounded-2xl p-6 relative">
             <div class="absolute top-3 right-3">
               <div
-                class="popular-badge flex items-center gap-1 px-2.5 py-1 bg-yellow-500/20 border border-yellow-500/40 rounded-full">
-                <i class="fas fa-star text-yellow-400 text-xs"></i>
-                <span class="text-xs text-yellow-400 font-semibold">Hot</span>
+                class="popular-badge flex items-center gap-1 px-2.5 py-1 bg-cyan-500/20 border border-cyan-500/40 rounded-full">
+                <i class="fas fa-star text-cyan-400 text-xs"></i>
+                <span class="text-xs text-cyan-400 font-semibold">Hot</span>
               </div>
             </div>
 
@@ -921,7 +1151,7 @@
               </div>
               <div class="flex-1 pt-1">
                 <h3 class="text-lg font-semibold text-slate-100 mb-1">Tailwind CSS</h3>
-                <p class="text-xs text-yellow-300/80 mb-2">Styling</p>
+                <p class="text-xs text-cyan-300/80 mb-2">Styling</p>
                 <p class="text-sm text-slate-300">Utility-first CSS framework for rapid UI development</p>
               </div>
             </div>
@@ -935,7 +1165,7 @@
       <section class="space-y-8">
         <div class="flex items-center justify-between">
           <div>
-            <p class="section-label text-base md:text-lg font-semibold text-yellow-300/80 tracking-[0.3em]">
+            <p class="section-label text-base md:text-lg font-semibold text-cyan-300/80 tracking-[0.3em]">
               FRONTEND
             </p>
             <div class="flex items-center gap-3">
@@ -959,7 +1189,7 @@
               </div>
               <div class="flex-1 pt-1">
                 <h3 class="text-lg font-semibold text-slate-100 mb-1">HTML</h3>
-                <p class="text-xs text-yellow-300/80 mb-2">Markup</p>
+                <p class="text-xs text-cyan-300/80 mb-2">Markup</p>
                 <p class="text-sm text-slate-300">Standard markup language for web pages</p>
               </div>
             </div>
@@ -975,7 +1205,7 @@
               </div>
               <div class="flex-1 pt-1">
                 <h3 class="text-lg font-semibold text-slate-100 mb-1">CSS</h3>
-                <p class="text-xs text-yellow-300/80 mb-2">Styling</p>
+                <p class="text-xs text-cyan-300/80 mb-2">Styling</p>
                 <p class="text-sm text-slate-300">Style sheet language for presentation</p>
               </div>
             </div>
@@ -985,9 +1215,9 @@
           <div class="tech-card rounded-2xl p-6 relative">
             <div class="absolute top-3 right-3">
               <div
-                class="popular-badge flex items-center gap-1 px-2.5 py-1 bg-yellow-500/20 border border-yellow-500/40 rounded-full">
-                <i class="fas fa-star text-yellow-400 text-xs"></i>
-                <span class="text-xs text-yellow-400 font-semibold">Hot</span>
+                class="popular-badge flex items-center gap-1 px-2.5 py-1 bg-cyan-500/20 border border-cyan-500/40 rounded-full">
+                <i class="fas fa-star text-cyan-400 text-xs"></i>
+                <span class="text-xs text-cyan-400 font-semibold">Hot</span>
               </div>
             </div>
 
@@ -999,7 +1229,7 @@
               </div>
               <div class="flex-1 pt-1">
                 <h3 class="text-lg font-semibold text-slate-100 mb-1">JavaScript</h3>
-                <p class="text-xs text-yellow-300/80 mb-2">Language</p>
+                <p class="text-xs text-cyan-300/80 mb-2">Language</p>
                 <p class="text-sm text-slate-300">Programming language of the web</p>
               </div>
             </div>
@@ -1009,9 +1239,9 @@
           <div class="tech-card rounded-2xl p-6 relative">
             <div class="absolute top-3 right-3">
               <div
-                class="popular-badge flex items-center gap-1 px-2.5 py-1 bg-yellow-500/20 border border-yellow-500/40 rounded-full">
-                <i class="fas fa-star text-yellow-400 text-xs"></i>
-                <span class="text-xs text-yellow-400 font-semibold">Hot</span>
+                class="popular-badge flex items-center gap-1 px-2.5 py-1 bg-cyan-500/20 border border-cyan-500/40 rounded-full">
+                <i class="fas fa-star text-cyan-400 text-xs"></i>
+                <span class="text-xs text-cyan-400 font-semibold">Hot</span>
               </div>
             </div>
 
@@ -1023,7 +1253,7 @@
               </div>
               <div class="flex-1 pt-1">
                 <h3 class="text-lg font-semibold text-slate-100 mb-1">TypeScript</h3>
-                <p class="text-xs text-yellow-300/80 mb-2">Language</p>
+                <p class="text-xs text-cyan-300/80 mb-2">Language</p>
                 <p class="text-sm text-slate-300">JavaScript with syntax for types</p>
               </div>
             </div>
@@ -1033,9 +1263,9 @@
           <div class="tech-card rounded-2xl p-6 relative">
             <div class="absolute top-3 right-3">
               <div
-                class="popular-badge flex items-center gap-1 px-2.5 py-1 bg-yellow-500/20 border border-yellow-500/40 rounded-full">
-                <i class="fas fa-star text-yellow-400 text-xs"></i>
-                <span class="text-xs text-yellow-400 font-semibold">Hot</span>
+                class="popular-badge flex items-center gap-1 px-2.5 py-1 bg-cyan-500/20 border border-cyan-500/40 rounded-full">
+                <i class="fas fa-star text-cyan-400 text-xs"></i>
+                <span class="text-xs text-cyan-400 font-semibold">Hot</span>
               </div>
             </div>
 
@@ -1047,7 +1277,7 @@
               </div>
               <div class="flex-1 pt-1">
                 <h3 class="text-lg font-semibold text-slate-100 mb-1">React</h3>
-                <p class="text-xs text-yellow-300/80 mb-2">Library</p>
+                <p class="text-xs text-cyan-300/80 mb-2">Library</p>
                 <p class="text-sm text-slate-300">Component-based UI library for building interfaces</p>
               </div>
             </div>
@@ -1063,7 +1293,7 @@
               </div>
               <div class="flex-1 pt-1">
                 <h3 class="text-lg font-semibold text-slate-100 mb-1">Tailwind CSS</h3>
-                <p class="text-xs text-yellow-300/80 mb-2">Framework</p>
+                <p class="text-xs text-cyan-300/80 mb-2">Framework</p>
                 <p class="text-sm text-slate-300">Utility-first CSS framework for rapid UI development</p>
               </div>
             </div>
@@ -1077,7 +1307,7 @@
       <section class="space-y-8">
         <div class="flex items-center justify-between">
           <div>
-            <p class="section-label text-base md:text-lg font-semibold text-yellow-300/80 tracking-[0.3em]">
+            <p class="section-label text-base md:text-lg font-semibold text-cyan-300/80 tracking-[0.3em]">
               BACKEND & APIs
             </p>
             <div class="flex items-center gap-3">
@@ -1095,9 +1325,9 @@
           <div class="tech-card rounded-2xl p-6 relative">
             <div class="absolute top-3 right-3">
               <div
-                class="popular-badge flex items-center gap-1 px-2.5 py-1 bg-yellow-500/20 border border-yellow-500/40 rounded-full">
-                <i class="fas fa-star text-yellow-400 text-xs"></i>
-                <span class="text-xs text-yellow-400 font-semibold">Hot</span>
+                class="popular-badge flex items-center gap-1 px-2.5 py-1 bg-cyan-500/20 border border-cyan-500/40 rounded-full">
+                <i class="fas fa-star text-cyan-400 text-xs"></i>
+                <span class="text-xs text-cyan-400 font-semibold">Hot</span>
               </div>
             </div>
 
@@ -1109,7 +1339,7 @@
               </div>
               <div class="flex-1 pt-1">
                 <h3 class="text-lg font-semibold text-slate-100 mb-1">Python</h3>
-                <p class="text-xs text-yellow-300/80 mb-2">Language</p>
+                <p class="text-xs text-cyan-300/80 mb-2">Language</p>
                 <p class="text-sm text-slate-300">High-level programming language for backends</p>
               </div>
             </div>
@@ -1119,9 +1349,9 @@
           <div class="tech-card rounded-2xl p-6 relative">
             <div class="absolute top-3 right-3">
               <div
-                class="popular-badge flex items-center gap-1 px-2.5 py-1 bg-yellow-500/20 border border-yellow-500/40 rounded-full">
-                <i class="fas fa-star text-yellow-400 text-xs"></i>
-                <span class="text-xs text-yellow-400 font-semibold">Hot</span>
+                class="popular-badge flex items-center gap-1 px-2.5 py-1 bg-cyan-500/20 border border-cyan-500/40 rounded-full">
+                <i class="fas fa-star text-cyan-400 text-xs"></i>
+                <span class="text-xs text-cyan-400 font-semibold">Hot</span>
               </div>
             </div>
 
@@ -1133,7 +1363,7 @@
               </div>
               <div class="flex-1 pt-1">
                 <h3 class="text-lg font-semibold text-slate-100 mb-1">Java</h3>
-                <p class="text-xs text-yellow-300/80 mb-2">Language</p>
+                <p class="text-xs text-cyan-300/80 mb-2">Language</p>
                 <p class="text-sm text-slate-300">Object-oriented programming language for enterprise applications</p>
               </div>
             </div>
@@ -1148,7 +1378,7 @@
               </div>
               <div class="flex-1 pt-1">
                 <h3 class="text-lg font-semibold text-slate-100 mb-1">FastAPI</h3>
-                <p class="text-xs text-yellow-300/80 mb-2">Framework</p>
+                <p class="text-xs text-cyan-300/80 mb-2">Framework</p>
                 <p class="text-sm text-slate-300">Modern, fast Python web framework for building APIs</p>
               </div>
             </div>
@@ -1164,7 +1394,7 @@
               </div>
               <div class="flex-1 pt-1">
                 <h3 class="text-lg font-semibold text-slate-100 mb-1">Dart</h3>
-                <p class="text-xs text-yellow-300/80 mb-2">Language</p>
+                <p class="text-xs text-cyan-300/80 mb-2">Language</p>
                 <p class="text-sm text-slate-300">Client-optimized language for fast apps on any platform</p>
               </div>
             </div>
@@ -1180,7 +1410,7 @@
               </div>
               <div class="flex-1 pt-1">
                 <h3 class="text-lg font-semibold text-slate-100 mb-1">MongoDB</h3>
-                <p class="text-xs text-yellow-300/80 mb-2">Database</p>
+                <p class="text-xs text-cyan-300/80 mb-2">Database</p>
                 <p class="text-sm text-slate-300">Document-based NoSQL database for modern applications</p>
               </div>
             </div>
@@ -1195,7 +1425,7 @@
               </div>
               <div class="flex-1 pt-1">
                 <h3 class="text-lg font-semibold text-slate-100 mb-1">REST APIs</h3>
-                <p class="text-xs text-yellow-300/80 mb-2">Architecture</p>
+                <p class="text-xs text-cyan-300/80 mb-2">Architecture</p>
                 <p class="text-sm text-slate-300">RESTful API design and implementation</p>
               </div>
             </div>
@@ -1209,7 +1439,7 @@
       <section class="space-y-8">
         <div class="flex items-center justify-between">
           <div>
-            <p class="section-label text-base md:text-lg font-semibold text-yellow-300/80 tracking-[0.3em]">
+            <p class="section-label text-base md:text-lg font-semibold text-cyan-300/80 tracking-[0.3em]">
               AI & DEV TOOLS
             </p>
             <div class="flex items-center gap-3">
@@ -1227,9 +1457,9 @@
           <div class="tech-card rounded-2xl p-6 relative">
             <div class="absolute top-3 right-3">
               <div
-                class="popular-badge flex items-center gap-1 px-2.5 py-1 bg-yellow-500/20 border border-yellow-500/40 rounded-full">
-                <i class="fas fa-star text-yellow-400 text-xs"></i>
-                <span class="text-xs text-yellow-400 font-semibold">Hot</span>
+                class="popular-badge flex items-center gap-1 px-2.5 py-1 bg-cyan-500/20 border border-cyan-500/40 rounded-full">
+                <i class="fas fa-star text-cyan-400 text-xs"></i>
+                <span class="text-xs text-cyan-400 font-semibold">Hot</span>
               </div>
             </div>
 
@@ -1241,7 +1471,7 @@
               </div>
               <div class="flex-1 pt-1">
                 <h3 class="text-lg font-semibold text-slate-100 mb-1">Git</h3>
-                <p class="text-xs text-yellow-300/80 mb-2">Version Control</p>
+                <p class="text-xs text-cyan-300/80 mb-2">Version Control</p>
                 <p class="text-sm text-slate-300">Distributed version control system for tracking changes</p>
               </div>
             </div>
@@ -1256,7 +1486,7 @@
               </div>
               <div class="flex-1 pt-1">
                 <h3 class="text-lg font-semibold text-slate-100 mb-1">GitHub</h3>
-                <p class="text-xs text-yellow-300/80 mb-2">Platform</p>
+                <p class="text-xs text-cyan-300/80 mb-2">Platform</p>
                 <p class="text-sm text-slate-300">Code hosting platform for version control and collaboration</p>
               </div>
             </div>
@@ -1271,7 +1501,7 @@
               </div>
               <div class="flex-1 pt-1">
                 <h3 class="text-lg font-semibold text-slate-100 mb-1">Comet</h3>
-                <p class="text-xs text-yellow-300/80 mb-2">AI Browser</p>
+                <p class="text-xs text-cyan-300/80 mb-2">AI Browser</p>
                 <p class="text-sm text-slate-300">Perplexity's AI-powered web browser with smart assistant</p>
               </div>
             </div>
@@ -1286,7 +1516,7 @@
               </div>
               <div class="flex-1 pt-1">
                 <h3 class="text-lg font-semibold text-slate-100 mb-1">Perplexity</h3>
-                <p class="text-xs text-yellow-300/80 mb-2">AI Search</p>
+                <p class="text-xs text-cyan-300/80 mb-2">AI Search</p>
                 <p class="text-sm text-slate-300">AI-powered search engine for developers</p>
               </div>
             </div>
@@ -1301,7 +1531,7 @@
               </div>
               <div class="flex-1 pt-1">
                 <h3 class="text-lg font-semibold text-slate-100 mb-1">Claude</h3>
-                <p class="text-xs text-yellow-300/80 mb-2">AI Assistant</p>
+                <p class="text-xs text-cyan-300/80 mb-2">AI Assistant</p>
                 <p class="text-sm text-slate-300">Advanced AI assistant for coding and problem-solving</p>
               </div>
             </div>
@@ -1317,7 +1547,7 @@
               </div>
               <div class="flex-1 pt-1">
                 <h3 class="text-lg font-semibold text-slate-100 mb-1">VS Code</h3>
-                <p class="text-xs text-yellow-300/80 mb-2">Editor</p>
+                <p class="text-xs text-cyan-300/80 mb-2">Editor</p>
                 <p class="text-sm text-slate-300">Powerful code editor with extensive extensions</p>
               </div>
             </div>
@@ -1334,7 +1564,7 @@
   <section id="projects" class="py-20 px-4">
     <div class="max-w-7xl mx-auto space-y-10">
       <div class="text-center space-y-3">
-        <p class="section-label text-base md:text-lg font-semibold text-yellow-300/80 tracking-[0.3em]">
+        <p class="section-label text-base md:text-lg font-semibold text-cyan-300/80 tracking-[0.3em]">
           PROJECTS
         </p>
         <h2 class="text-3xl md:text-4xl font-black">
@@ -1348,8 +1578,8 @@
 
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- Memory game -->
-        <div class="project-card glass-card rounded-2xl border border-yellow-500/35 overflow-hidden">
-          <div class="h-44 bg-gradient-to-br from-yellow-600 via-amber-500 to-slate-900 flex items-center justify-center">
+        <div class="project-card glass-card rounded-2xl border border-cyan-500/35 overflow-hidden">
+          <div class="h-44 bg-gradient-to-br from-cyan-600 via-cyan-500 to-slate-900 flex items-center justify-center">
             <span class="text-5xl">🧠</span>
           </div>
           <div class="p-6 space-y-4">
@@ -1358,9 +1588,9 @@
               Interactive memory game with animated cards, streak tracking and saved scores via browser storage.
             </p>
             <div class="flex flex-wrap gap-2 text-xs">
-              <span class="px-3 py-1 rounded-full bg-yellow-500/15 text-yellow-200">JavaScript</span>
-              <span class="px-3 py-1 rounded-full bg-yellow-500/15 text-yellow-200">CSS Animations</span>
-              <span class="px-3 py-1 rounded-full bg-yellow-500/15 text-yellow-200">HTML</span>
+              <span class="px-3 py-1 rounded-full bg-cyan-500/15 text-cyan-200">JavaScript</span>
+              <span class="px-3 py-1 rounded-full bg-cyan-500/15 text-cyan-200">CSS Animations</span>
+              <span class="px-3 py-1 rounded-full bg-cyan-500/15 text-cyan-200">HTML</span>
             </div>
             <div class="flex gap-3 pt-1 text-sm">
               <a href="https://github.com/vivekx11/memorygame" target="_blank"
@@ -1376,8 +1606,8 @@
         </div>
 
         <!-- College event -->
-        <div class="project-card glass-card rounded-2xl border border-yellow-500/35 overflow-hidden">
-          <div class="h-44 bg-gradient-to-br from-blue-600 via-yellow-500 to-slate-900 flex items-center justify-center">
+        <div class="project-card glass-card rounded-2xl border border-cyan-500/35 overflow-hidden">
+          <div class="h-44 bg-gradient-to-br from-blue-600 via-cyan-500 to-slate-900 flex items-center justify-center">
             <span class="text-5xl">🎓</span>
           </div>
           <div class="p-6 space-y-4">
@@ -1387,9 +1617,9 @@
               Node.js setup.
             </p>
             <div class="flex flex-wrap gap-2 text-xs">
-              <span class="px-3 py-1 rounded-full bg-yellow-500/15 text-yellow-200">React</span>
-              <span class="px-3 py-1 rounded-full bg-yellow-500/15 text-yellow-200">Node.js</span>
-              <span class="px-3 py-1 rounded-full bg-yellow-500/15 text-yellow-200">SQL</span>
+              <span class="px-3 py-1 rounded-full bg-cyan-500/15 text-cyan-200">React</span>
+              <span class="px-3 py-1 rounded-full bg-cyan-500/15 text-cyan-200">Node.js</span>
+              <span class="px-3 py-1 rounded-full bg-cyan-500/15 text-cyan-200">SQL</span>
             </div>
             <div class="flex gap-3 pt-1 text-sm">
               <a href="https://github.com/vivekx11/CODETECH" target="_blank"
@@ -1405,8 +1635,8 @@
         </div>
 
         <!-- College event -->
-        <div class="project-card glass-card rounded-2xl border border-yellow-500/35 overflow-hidden">
-          <div class="h-44 bg-gradient-to-br from-blue-600 via-yellow-500 to-slate-900 flex items-center justify-center">
+        <div class="project-card glass-card rounded-2xl border border-cyan-500/35 overflow-hidden">
+          <div class="h-44 bg-gradient-to-br from-blue-600 via-cyan-500 to-slate-900 flex items-center justify-center">
             <span class="text-5xl">🎓</span>
           </div>
           <div class="p-6 space-y-4">
@@ -1416,9 +1646,9 @@
               Node.js setup.
             </p>
             <div class="flex flex-wrap gap-2 text-xs">
-              <span class="px-3 py-1 rounded-full bg-yellow-500/15 text-yellow-200">React</span>
-              <span class="px-3 py-1 rounded-full bg-yellow-500/15 text-yellow-200">Node.js</span>
-              <span class="px-3 py-1 rounded-full bg-yellow-500/15 text-yellow-200">SQL</span>
+              <span class="px-3 py-1 rounded-full bg-cyan-500/15 text-cyan-200">React</span>
+              <span class="px-3 py-1 rounded-full bg-cyan-500/15 text-cyan-200">Node.js</span>
+              <span class="px-3 py-1 rounded-full bg-cyan-500/15 text-cyan-200">SQL</span>
             </div>
             <div class="flex gap-3 pt-1 text-sm">
               <a href="https://github.com/vivekx11/CODETECH" target="_blank"
@@ -1434,8 +1664,8 @@
         </div>
 
         <!-- College event -->
-        <div class="project-card glass-card rounded-2xl border border-yellow-500/35 overflow-hidden">
-          <div class="h-44 bg-gradient-to-br from-blue-600 via-yellow-500 to-slate-900 flex items-center justify-center">
+        <div class="project-card glass-card rounded-2xl border border-cyan-500/35 overflow-hidden">
+          <div class="h-44 bg-gradient-to-br from-blue-600 via-cyan-500 to-slate-900 flex items-center justify-center">
             <span class="text-5xl">🎓</span>
           </div>
           <div class="p-6 space-y-4">
@@ -1445,9 +1675,9 @@
               Node.js setup.
             </p>
             <div class="flex flex-wrap gap-2 text-xs">
-              <span class="px-3 py-1 rounded-full bg-yellow-500/15 text-yellow-200">React</span>
-              <span class="px-3 py-1 rounded-full bg-yellow-500/15 text-yellow-200">Node.js</span>
-              <span class="px-3 py-1 rounded-full bg-yellow-500/15 text-yellow-200">SQL</span>
+              <span class="px-3 py-1 rounded-full bg-cyan-500/15 text-cyan-200">React</span>
+              <span class="px-3 py-1 rounded-full bg-cyan-500/15 text-cyan-200">Node.js</span>
+              <span class="px-3 py-1 rounded-full bg-cyan-500/15 text-cyan-200">SQL</span>
             </div>
             <div class="flex gap-3 pt-1 text-sm">
               <a href="https://github.com/vivekx11/CODETECH" target="_blank"
@@ -1463,8 +1693,8 @@
         </div>
 
         <!-- College event -->
-        <div class="project-card glass-card rounded-2xl border border-yellow-500/35 overflow-hidden">
-          <div class="h-44 bg-gradient-to-br from-blue-600 via-yellow-500 to-slate-900 flex items-center justify-center">
+        <div class="project-card glass-card rounded-2xl border border-cyan-500/35 overflow-hidden">
+          <div class="h-44 bg-gradient-to-br from-blue-600 via-cyan-500 to-slate-900 flex items-center justify-center">
             <span class="text-5xl">🎓</span>
           </div>
           <div class="p-6 space-y-4">
@@ -1474,9 +1704,9 @@
               Node.js setup.
             </p>
             <div class="flex flex-wrap gap-2 text-xs">
-              <span class="px-3 py-1 rounded-full bg-yellow-500/15 text-yellow-200">React</span>
-              <span class="px-3 py-1 rounded-full bg-yellow-500/15 text-yellow-200">Node.js</span>
-              <span class="px-3 py-1 rounded-full bg-yellow-500/15 text-yellow-200">SQL</span>
+              <span class="px-3 py-1 rounded-full bg-cyan-500/15 text-cyan-200">React</span>
+              <span class="px-3 py-1 rounded-full bg-cyan-500/15 text-cyan-200">Node.js</span>
+              <span class="px-3 py-1 rounded-full bg-cyan-500/15 text-cyan-200">SQL</span>
             </div>
             <div class="flex gap-3 pt-1 text-sm">
               <a href="https://github.com/vivekx11/CODETECH" target="_blank"
@@ -1492,8 +1722,8 @@
         </div>
 
         <!-- Mindfulness app -->
-        <div class="project-card glass-card rounded-2xl border border-yellow-500/35 overflow-hidden">
-          <div class="h-44 bg-gradient-to-br from-yellow-600 via-lime-500 to-slate-900 flex items-center justify-center">
+        <div class="project-card glass-card rounded-2xl border border-cyan-500/35 overflow-hidden">
+          <div class="h-44 bg-gradient-to-br from-cyan-600 via-lime-500 to-slate-900 flex items-center justify-center">
             <span class="text-5xl">🧘</span>
           </div>
           <div class="p-6 space-y-4">
@@ -1503,9 +1733,9 @@
               storage.
             </p>
             <div class="flex flex-wrap gap-2 text-xs">
-              <span class="px-3 py-1 rounded-full bg-yellow-500/15 text-yellow-200">Kotlin</span>
-              <span class="px-3 py-1 rounded-full bg-yellow-500/15 text-yellow-200">Android Studio</span>
-              <span class="px-3 py-1 rounded-full bg-yellow-500/15 text-yellow-200">Firebase</span>
+              <span class="px-3 py-1 rounded-full bg-cyan-500/15 text-cyan-200">Kotlin</span>
+              <span class="px-3 py-1 rounded-full bg-cyan-500/15 text-cyan-200">Android Studio</span>
+              <span class="px-3 py-1 rounded-full bg-cyan-500/15 text-cyan-200">Firebase</span>
             </div>
             <div class="flex gap-3 pt-1 text-sm">
               <a href="https://github.com/vivekx11/Mindfullness" target="_blank"
@@ -1529,7 +1759,7 @@
   <section id="blog" class="py-20 px-4">
     <div class="max-w-7xl mx-auto space-y-10">
       <div class="text-center space-y-3">
-        <p class="section-label text-base md:text-lg font-semibold text-yellow-300/80 tracking-[0.3em">
+        <p class="section-label text-base md:text-lg font-semibold text-cyan-300/80 tracking-[0.3em">
           BLOG
         </p>
         <h2 class="text-3xl md:text-4xl font-black">
@@ -1543,7 +1773,7 @@
 
       <div class="grid md:grid-cols-3 gap-6">
         <article class="blog-card rounded-2xl p-6">
-          <p class="text-xs text-yellow-300/80 uppercase tracking-[0.18em] mb-2">
+          <p class="text-xs text-cyan-300/80 uppercase tracking-[0.18em] mb-2">
             React • Hooks
           </p>
           <h3 class="text-lg font-semibold text-slate-100 mb-2">Mastering React Hooks</h3>
@@ -1551,26 +1781,26 @@
             Practical patterns with useState, useEffect and custom hooks to keep components predictable and <span
               class="font-semibold">clean</span>.
           </p>
-          <a href="#" class="text-xs font-semibold text-yellow-300">
+          <a href="#" class="text-xs font-semibold text-cyan-300">
             Read More →
           </a>
         </article>
 
         <article class="blog-card rounded-2xl p-6">
-          <p class="text-xs text-yellow-300/80 uppercase tracking-[0.18em] mb-2">
+          <p class="text-xs text-cyan-300/80 uppercase tracking-[0.18em] mb-2">
             Node.js • APIs
           </p>
           <h3 class="text-lg font-semibold text-slate-100 mb-2">Building Scalable Node.js APIs</h3>
           <p class="text-sm text-slate-300 mb-3">
             Using Express, modular routing and middleware to design predictable, extendable REST services.
           </p>
-          <a href="#" class="text-xs font-semibold text-yellow-300">
+          <a href="#" class="text-xs font-semibold text-cyan-300">
             Read More →
           </a>
         </article>
 
         <article class="blog-card rounded-2xl p-6">
-          <p class="text-xs text-yellow-300/80 uppercase tracking-[0.18em] mb-2">
+          <p class="text-xs text-cyan-300/80 uppercase tracking-[0.18em] mb-2">
             Trends
           </p>
           <h3 class="text-lg font-semibold text-slate-100 mb-2">Future of Web Development</h3>
@@ -1578,7 +1808,7 @@
             Exploring Web3, AI integrations and how PWAs are reshaping <span class="font-semibold">experience</span>
             design.
           </p>
-          <a href="#" class="text-xs font-semibold text-yellow-300">
+          <a href="#" class="text-xs font-semibold text-cyan-300">
             Read More →
           </a>
         </article>
@@ -1592,7 +1822,7 @@
   <section id="testimonials" class="py-20 px-4">
     <div class="max-w-7xl mx-auto space-y-10">
       <div class="text-center space-y-3">
-        <p class="section-label text-base md:text-lg font-semibold text-yellow-300/80 tracking-[0.3em">
+        <p class="section-label text-base md:text-lg font-semibold text-cyan-300/80 tracking-[0.3em">
           TESTIMONIALS
         </p>
         <h2 class="text-3xl md:text-4xl font-black">
@@ -1658,7 +1888,7 @@
   <section id="contact" class="py-20 px-4">
     <div class="max-w-3xl mx-auto space-y-10">
       <div class="text-center space-y-3">
-        <p class="section-label text-base md:text-lg font-semibold text-yellow-300/80 tracking-[0.3em">
+        <p class="section-label text-base md:text-lg font-semibold text-cyan-300/80 tracking-[0.3em">
           CONTACT
         </p>
         <h2 class="text-3xl md:text-4xl font-black">
@@ -1766,15 +1996,15 @@
   </section>
 
   <!-- Footer -->
-  <footer class="border-t border-yellow-500/30 bg-black">
+  <footer class="border-t border-cyan-500/30 bg-black">
     <div
       class="max-w-7xl mx-auto px-4 py-10 flex flex-col md:flex-row items-center md:items-start justify-between gap-8">
 
       <!-- Brand + mini bio -->
       <div class="flex items-center gap-4">
         <div
-          class="w-10 h-10 rounded-2xl bg-yellow-500/15 border border-yellow-400/70 flex items-center justify-center shadow-lg shadow-yellow-500/30">
-          <span class="text-[11px] font-bold tracking-[0.22em] text-yellow-200">VS</span>
+          class="w-10 h-10 rounded-2xl bg-cyan-500/15 border border-cyan-400/70 flex items-center justify-center shadow-lg shadow-cyan-500/30">
+          <span class="text-[11px] font-bold tracking-[0.22em] text-cyan-200">VS</span>
         </div>
         <div>
           <p class="text-sm font-semibold text-slate-100 tracking-[0.2em] uppercase">
@@ -1817,7 +2047,7 @@
 
         <p>© 2025 Vivek Sawji. All rights reserved.</p>
         <p class="text-[11px] text-slate-500">
-          Crafted with <span class="text-yellow-300">❤️</span>, GSAP, Tailwind and late‑night caffeine.
+          Crafted with <span class="text-cyan-300">❤️</span>, GSAP, Tailwind and late‑night caffeine.
         </p>
       </div>
     </div>
@@ -1825,6 +2055,35 @@
 
   <!-- Scripts -->
   <script>
+    /* Theme Toggle Functionality - COMMENTED OUT
+    const themeToggle = document.getElementById('themeToggle');
+    const body = document.body;
+    const themeIcon = themeToggle.querySelector('i');
+
+    // Check for saved theme preference or default to dark mode
+    const currentTheme = localStorage.getItem('theme') || 'dark';
+    if (currentTheme === 'light') {
+      body.classList.add('light-mode');
+      themeIcon.classList.remove('fa-sun');
+      themeIcon.classList.add('fa-moon');
+    }
+
+    // Toggle theme
+    themeToggle.addEventListener('click', () => {
+      body.classList.toggle('light-mode');
+      
+      if (body.classList.contains('light-mode')) {
+        themeIcon.classList.remove('fa-sun');
+        themeIcon.classList.add('fa-moon');
+        localStorage.setItem('theme', 'light');
+      } else {
+        themeIcon.classList.remove('fa-moon');
+        themeIcon.classList.add('fa-sun');
+        localStorage.setItem('theme', 'dark');
+      }
+    });
+    */
+
     // Particles
     particlesJS('particles-js', {
       particles: {
@@ -1903,6 +2162,35 @@
         closeMenu();
       }
     });
+
+    // Dynamic greeting based on time
+    function updateGreeting() {
+      const greetingElement = document.getElementById('greetingMessage');
+      const currentHour = new Date().getHours();
+      
+      let greeting = '';
+      
+      if (currentHour >= 5 && currentHour < 12) {
+        greeting = 'GOOD MORNING';
+      } else if (currentHour >= 12 && currentHour < 17) {
+        greeting = 'GOOD AFTERNOON';
+      } else if (currentHour >= 17 && currentHour < 21) {
+        greeting = 'GOOD EVENING';
+      } else {
+        greeting = 'GOOD NIGHT';
+      }
+      
+      if (greetingElement) {
+        greetingElement.textContent = greeting;
+      }
+    }
+    
+    // Update greeting on page load
+    updateGreeting();
+    
+    // Update greeting every minute
+    setInterval(updateGreeting, 60000);
+
 
     // Custom cursor
     const cursor = document.querySelector('.cursor');
@@ -2054,7 +2342,7 @@
       <input type="password" id="passwordInput" placeholder="Enter password"
         class="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:border-blue-500 focus:outline-none mb-4 text-lg">
       <button onclick="checkPassword()"
-        class="w-full bg-gradient-to-r from-blue-500 to-yellow-600 text-white py-3 rounded-xl font-semibold text-lg transition-transform">
+        class="w-full bg-gradient-to-r from-blue-500 to-cyan-600 text-white py-3 rounded-xl font-semibold text-lg transition-transform">
         Access Dashboard
       </button>
       <p id="errorMessage" class="text-red-500 text-sm mt-3 text-center"></p>
@@ -2062,7 +2350,7 @@
   </div>
 
   <!-- Admin Dashboard -->
-  <div id="adminPanel" class="fixed inset-0 bg-gradient-to-br from-blue-50 to-yellow-50 hidden overflow-y-auto z-[99999]">
+  <div id="adminPanel" class="fixed inset-0 bg-gradient-to-br from-blue-50 to-cyan-50 hidden overflow-y-auto z-[99999]">
     <div class="min-h-screen p-4 md:p-8">
       <div class="max-w-7xl mx-auto">
 
@@ -2070,7 +2358,7 @@
         <div class="bg-white rounded-2xl shadow-xl p-6 mb-6 animate-fade-in">
           <div class="flex justify-between items-center">
             <div>
-              <h1 class="text-4xl font-bold bg-gradient-to-r from-blue-600 to-yellow-600 bg-clip-text text-transparent">
+              <h1 class="text-4xl font-bold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
                 📊 Analytics Dashboard
               </h1>
               <p class="text-gray-600 mt-2">Real-time website analytics & visitor insights</p>
@@ -2113,10 +2401,10 @@
           <div class="bg-white rounded-2xl shadow-xl p-6 transition-shadow animate-fade-in">
             <div class="flex items-center justify-between mb-4">
               <div class="text-4xl">📈</div>
-              <div class="bg-yellow-100 text-yellow-600 px-3 py-1 rounded-full text-sm font-semibold">All Time</div>
+              <div class="bg-cyan-100 text-cyan-600 px-3 py-1 rounded-full text-sm font-semibold">All Time</div>
             </div>
             <p class="text-gray-600 text-sm uppercase tracking-wider mb-2">Total Visits</p>
-            <p class="text-4xl font-bold text-yellow-600" id="totalUsers">0</p>
+            <p class="text-4xl font-bold text-cyan-600" id="totalUsers">0</p>
           </div>
 
           <!-- New vs Returning -->
@@ -2601,3 +2889,4 @@
 </body>
 
 </html>
+
