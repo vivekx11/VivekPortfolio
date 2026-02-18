@@ -35,6 +35,40 @@
 
 
   <style>
+    :root {
+      /* Background Colors */
+      --bg-main: #060d21;
+      --bg-gradient: #0a1e42;
+      --bg-section: #111a2e;
+      --bg-secondary: #1a2540;
+      --bg-overlay: #0b1730;
+
+      /* Accent Gold Colors - Premium Portfolio Gold Palette */
+      --gold-main: #FFD700;
+      --gold-soft: #B7B5A7;
+      --gold-hover: #E6C200;
+      --gold-dark: #8F8C73;
+      --gold-light: #F5E6A3;
+      --gold-deep: #FFD700;
+
+      /* Text Colors */
+      --text-primary: #FFFFFF;
+      --text-secondary: #C0C4C8;
+      --text-muted: #8A94A6;
+    }
+
+    .solid-gold {
+      background: #FFD700;
+      color: #1a0f00;
+      padding: 30px 60px;
+      font-size: 36px;
+      font-weight: bold;
+      text-transform: uppercase;
+      display: inline-block;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+
     * {
       margin: 0;
       padding: 0;
@@ -44,8 +78,8 @@
 
     /* Dark Mode (Default) */
     body {
-      background: radial-gradient(circle at top left, #000000 0, #1a1a1a 40%, #000 100%);
-      color: #f9fafb;
+      background: linear-gradient(135deg, var(--bg-main) 0%, var(--bg-gradient) 50%, var(--bg-section) 100%);
+      color: var(--text-primary);
       overflow-x: hidden;
       transition: background 0.3s ease, color 0.3s ease;
     }
@@ -136,8 +170,8 @@
 
     /* Glassmorphism cards */
     .glass-card {
-      background: radial-gradient(circle at top left, rgba(6, 182, 212, 0.04), rgba(26, 26, 26, 0.85));
-      border: 1px solid rgba(6, 182, 212, 0.25);
+      background: linear-gradient(135deg, rgba(14, 24, 50, 0.92), rgba(10, 18, 40, 0.96));
+      border: 1px solid #FFD700;
       box-shadow: 0 24px 60px rgba(0, 0, 0, 0.8);
     }
 
@@ -150,17 +184,15 @@
     */
 
     .gradient-text {
-      background: linear-gradient(135deg, #06b6d4, #22d3ee);
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
+      color: #FFD700;
     }
 
     .nav-blur {
-      background: radial-gradient(circle at top left, rgba(0, 0, 0, 0.95), rgba(6, 182, 212, 0.2));
+      background: rgba(6, 13, 33, 0.95);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
-      border: 1px solid rgba(6, 182, 212, 0.5);
+      /* border: 1px solid rgba(255, 215, 0, 0.2); OLD */
+      border: 1px solid #FFD700;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
     }
 
@@ -177,7 +209,7 @@
       position: fixed;
       width: 24px;
       height: 24px;
-      background: #06b6d4;
+      background: var(--gold-main);
       border-radius: 999px;
       pointer-events: none;
       mix-blend-mode: difference;
@@ -189,7 +221,7 @@
       width: 60px;
       height: 60px;
       border-radius: 999px;
-      border: 2px solid #22d3ee;
+      border: 2px solid var(--gold-main);
       pointer-events: none;
       z-index: 9998;
       opacity: 0.45;
@@ -200,7 +232,7 @@
       position: absolute;
       width: 650px;
       height: 650px;
-      background: radial-gradient(circle, rgba(0, 0, 0, 0), transparent 70%);
+      background: radial-gradient(circle, rgba(255, 215, 0, 0.15), transparent 70%);
       filter: blur(70px);
       border-radius: 999px;
       animation: glow-pulse 7s ease-in-out infinite;
@@ -251,7 +283,7 @@
     .section-divider {
       height: 1px;
       width: 100%;
-      background: linear-gradient(to right, transparent, rgba(6, 182, 212, 0.5), transparent);
+      background: linear-gradient(to right, transparent, rgba(255, 215, 0, 0.3), transparent);
       opacity: 0.5;
     }
 
@@ -273,7 +305,7 @@
       transform: translateX(-50%);
       width: 3px;
       height: 100%;
-      background: linear-gradient(to bottom, rgba(6, 182, 212, 0.2), rgba(34, 211, 238, 0.8), rgba(6, 182, 212, 0.2));
+      background: linear-gradient(to bottom, rgba(255, 215, 0, 0.2), rgba(255, 215, 0, 0.8), rgba(255, 215, 0, 0.2));
     }
 
     @media (min-width: 769px) {
@@ -285,9 +317,9 @@
         width: 20px;
         height: 20px;
         border-radius: 999px;
-        background: #ffffff;
-        border: 3px solid #06b6d4;
-        box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.3), 0 0 20px rgba(6, 182, 212, 0.6);
+        background: var(--gold-main);
+        border: 3px solid var(--bg-main);
+        box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.3), 0 0 20px rgba(255, 215, 0, 0.6);
         z-index: 10;
       }
 
@@ -299,9 +331,9 @@
         width: 20px;
         height: 20px;
         border-radius: 999px;
-        background: #ffffff;
-        border: 3px solid #06b6d4;
-        box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.3), 0 0 20px rgba(6, 182, 212, 0.6);
+        background: var(--gold-main);
+        border: 3px solid var(--bg-main);
+        box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.3), 0 0 20px rgba(255, 215, 0, 0.6);
         z-index: 10;
       }
 
@@ -313,9 +345,9 @@
         width: 20px;
         height: 20px;
         border-radius: 999px;
-        background: #ffffff;
-        border: 3px solid #06b6d4;
-        box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.3), 0 0 20px rgba(6, 182, 212, 0.6);
+        background: var(--gold-main);
+        border: 3px solid var(--bg-main);
+        box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.3), 0 0 20px rgba(255, 215, 0, 0.6);
         z-index: 10;
       }
 
@@ -327,9 +359,9 @@
         width: 20px;
         height: 20px;
         border-radius: 999px;
-        background: #ffffff;
-        border: 3px solid #06b6d4;
-        box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.3), 0 0 20px rgba(6, 182, 212, 0.6);
+        background: var(--gold-main);
+        border: 3px solid var(--bg-main);
+        box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.3), 0 0 20px rgba(255, 215, 0, 0.6);
         z-index: 10;
       }
     }
@@ -348,9 +380,9 @@
         width: 18px;
         height: 18px;
         border-radius: 999px;
-        background: #ffffff;
-        border: 3px solid #06b6d4;
-        box-shadow: 0 0 10px rgba(6, 182, 212, 0.5);
+        background: var(--gold-main);
+        border: 3px solid var(--bg-main);
+        box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
         z-index: 10;
       }
 
@@ -363,51 +395,93 @@
     .project-card {
       position: relative;
       overflow: hidden;
+      border: 1px solid #FFD700;
     }
 
-    /* Tech card with rotating border effect */
-    .tech-card {
-      position: relative;
-      background: radial-gradient(circle at top left, rgba(6, 182, 212, 0.06), rgba(26, 26, 26, 0.9));
-      border: 1px solid rgba(6, 182, 212, 0.3);
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
-      overflow: hidden;
+    /* Tech Chip Styles */
+
+    .tech-chip {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 8px;
+
+      padding: 10px 18px;
+
+      background: transparent;
+
+      border: 1px solid #FFD700;
+
+      border-radius: 10px;
+
+      color: #C0C4C8;
+
+      font-size: 14px;
+
+      font-weight: 500;
+
+      transition: all 0.3s ease;
+
+      cursor: default;
+
     }
 
-    /* Light Mode - COMMENTED OUT
-    body.light-mode .tech-card {
-      background: radial-gradient(circle at top left, rgba(6, 182, 212, 0.1), rgba(255, 255, 255, 0.95));
-      border: 1px solid rgba(6, 182, 212, 0.35);
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
-    }
-    */
+    .tech-chip:hover {
 
-    /* Icon glow */
-    .icon-glow {
-      box-shadow: 0 0 25px rgba(6, 182, 212, 0.4);
-    }
+      border-color: rgba(255, 215, 0, 0.4);
 
-    /* Popular badge pulse */
-    @keyframes pulse-badge {
+      background: rgba(255, 215, 0, 0.08);
 
-      0%,
-      100% {
-        box-shadow: 0 0 15px rgba(6, 182, 212, 0.4);
-      }
+      color: #fff;
 
-      50% {
-        box-shadow: 0 0 25px rgba(6, 182, 212, 0.7);
-      }
+      transform: translateY(-2px);
+
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+
     }
 
-    .popular-badge {
-      animation: pulse-badge 2s ease-in-out infinite;
+    .tech-chip img {
+
+      width: 18px;
+
+      height: 18px;
+
+      flex-shrink: 0;
+
+    }
+
+    .tech-chip i {
+
+      font-size: 16px;
+
+      flex-shrink: 0;
+
+      width: 18px;
+
+      text-align: center;
+
+    }
+
+    .tech-category-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #FFD700;
+      margin-bottom: 12px;
+    }
+
+    .tech-container {
+      background: transparent;
+      border: 1px solid #FFD700;
+      border-radius: 20px;
+      padding: 2rem 2.5rem;
     }
 
     /* Blog card */
     .blog-card {
-      background: rgba(26, 26, 26, 0.9);
-      border: 1px solid rgba(6, 182, 212, 0.35);
+      background: rgba(14, 24, 50, 0.92);
+      border: 1px solid #FFD700;
       box-shadow: 0 22px 60px rgba(0, 0, 0, 0.9);
     }
 
@@ -421,8 +495,8 @@
 
     /* Testimonial card */
     .testimonial-card {
-      background: radial-gradient(circle at top left, rgba(6, 182, 212, 0.1), rgba(26, 26, 26, 0.95));
-      border: 1px solid rgba(34, 211, 238, 0.4);
+      background: linear-gradient(135deg, rgba(14, 24, 50, 0.92), rgba(10, 18, 40, 0.96));
+      border: 1px solid #FFD700;
       box-shadow: 0 20px 60px rgba(0, 0, 0, 0.9);
     }
 
@@ -436,8 +510,8 @@
 
     /* Contact form */
     .input-field {
-      background: rgba(26, 26, 26, 0.9);
-      border: 1px solid rgba(6, 182, 212, 0.5);
+      background: rgba(14, 24, 50, 0.92);
+      border: 1px solid #FFD700;
       border-radius: 0.75rem;
     }
 
@@ -451,9 +525,9 @@
 
     .input-field:focus {
       outline: none;
-      border-color: rgba(34, 211, 238, 0.9);
-      background: rgba(26, 26, 26, 1);
-      box-shadow: 0 0 0 1px rgba(6, 182, 212, 0.7), 0 18px 45px rgba(6, 182, 212, 0.35);
+      border-color: var(--gold-main);
+      background: rgba(14, 24, 50, 1);
+      box-shadow: 0 0 0 1px rgba(255, 215, 0, 0.7), 0 18px 45px rgba(255, 215, 0, 0.25);
     }
 
     /* Light Mode - COMMENTED OUT
@@ -465,15 +539,17 @@
 
     /* CTA button */
     .btn-primary {
-      background: linear-gradient(135deg, #06b6d4, #22d3ee, #67e8f9);
-      color: #000000;
-      box-shadow: 0 18px 45px rgba(6, 182, 212, 0.65);
+      background: #FFD700;
+      color: var(--bg-main);
+      box-shadow: 0 18px 45px rgba(255, 215, 0, 0.4);
+      font-weight: 600;
     }
 
     /* Project card */
     .project-card {
       position: relative;
       overflow: hidden;
+      border: 1px solid #FFD700;
     }
 
     /* Light Mode - COMMENTED OUT
@@ -510,7 +586,7 @@
       width: 70%;
       max-width: 320px;
       height: 100vh;
-      background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%);
+      background: linear-gradient(135deg, #060d21 0%, #0a1e42 50%, #111a2e 100%);
       transform: translateX(100%);
       transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
       z-index: 1000;
@@ -568,14 +644,14 @@
       width: 32px;
       height: 32px;
       border-radius: 8px;
-      background: rgba(6, 182, 212, 0.2);
-      border: 2px solid rgba(6, 182, 212, 0.6);
+      background: rgba(255, 215, 0, 0.15);
+      border: 2px solid var(--gold-main);
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 11px;
       font-weight: bold;
-      color: #06b6d4;
+      color: var(--gold-main);
     }
 
     .menu-brand-text {
@@ -596,7 +672,7 @@
       width: 36px;
       height: 36px;
       background: transparent;
-      border: 2px solid rgba(148, 163, 184, 0.3);
+      border: 2px solid #FFD700;
       border-radius: 8px;
       cursor: pointer;
       display: flex;
@@ -666,9 +742,9 @@
     */
 
     .menu-items a.active {
-      color: #06b6d4;
+      color: var(--gold-highlight);
       padding-left: 8px;
-      background: rgba(6, 182, 212, 0.05);
+      background: rgba(255, 215, 0, 0.05);
     }
 
     /* Light Mode - COMMENTED OUT
@@ -679,14 +755,16 @@
     */
 
     .menu-items a.contact-btn {
-      background: linear-gradient(135deg, #06b6d4, #22d3ee);
-      color: #000000;
+      background: rgba(255, 215, 0, 0.05);
+      color: #FFD700;
       text-align: center;
       border-radius: 12px;
       padding: 14px;
       margin-top: 20px;
-      border: none;
+      border: 1px solid #FFD700;
       font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
     }
 
 
@@ -702,8 +780,8 @@
 
     /* Footer */
     footer {
-      border-top: 1px solid rgba(6, 182, 212, 0.3);
-      background: #000000;
+      border-top: 1px solid #FFD700;
+      background: var(--bg-main);
     }
 
     /* Light Mode - COMMENTED OUT
@@ -760,7 +838,7 @@
       </div>
       <button class="menu-close" id="menuClose"></button>
     </div>
-    
+
     <div class="menu-items">
       <a href="#home">Home</a>
       <a href="#about">About</a>
@@ -778,8 +856,8 @@
     <div class="nav-blur rounded-full px-6 py-3">
       <div class="flex items-center justify-between">
         <a href="#home" class="flex items-center gap-2">
-          <div class="w-8 h-8 rounded-xl bg-cyan-500/20 flex items-center justify-center border border-cyan-400/80">
-            <span class="text-cyan-300 text-xs font-bold">VS</span>
+          <div class="w-8 h-8 rounded-xl bg-\[#FFD700\]/20 flex items-center justify-center border border-amber-400/80">
+            <span class="text-\[#FFD700\] text-xs font-bold">VS</span>
           </div>
           <span class="text-lg md:text-xl font-semibold tracking-[0.22em] text-slate-200">VIVEK.S</span>
         </a>
@@ -793,7 +871,7 @@
           <a href="#blog" class="transition-colors">BLOG</a>
           <a href="#testimonials" class="transition-colors">TESTIMONIALS</a>
           <a href="#contact"
-            class="px-4 py-2 rounded-full text-xs font-semibold bg-cyan-500/10 border border-cyan-400/70">
+            class="px-4 py-2 rounded-full text-xs font-semibold bg-\[#FFD700\]/10 border border-\[#FFD700\]/70">
             CONTACT
           </a>
         </div>
@@ -817,7 +895,7 @@
     <div class="max-w-7xl mx-auto w-full grid lg:grid-cols-[1.5fr,1.1fr] gap-10 lg:gap-16 items-center">
       <!-- Text -->
       <div class="space-y-6 relative z-10">
-        <p class="section-label text-xs font-semibold text-cyan-300/80 tracking-[0.35em]">
+        <p class="section-label text-xs font-semibold text-\[#FFD700\] tracking-[0.35em]">
           THE DEVELOPER
         </p>
         <h1 class="text-4xl md:text-6xl xl:text-7xl font-black leading-tight">
@@ -825,7 +903,7 @@
           <span class="block gradient-text">SAWJI</span>
         </h1>
         <p class="text-lg md:text-xl text-slate-300 max-w-xl">
-           Developer, problem solver, and tech enthusiast crafting performant, <span
+          Developer, problem solver, and tech enthusiast crafting performant, <span
             class="font-semibold">scalable</span> web experiences.
         </p>
         <p class="text-sm md:text-base text-slate-400 max-w-xl">
@@ -838,7 +916,7 @@
             View Projects
           </a>
           <a href="#contact"
-            class="px-7 py-3 rounded-full text-sm font-semibold border border-cyan-500/60 bg-cyan-500/5 text-cyan-100">
+            class="px-7 py-3 rounded-full text-sm font-semibold border border-\[#FFD700\]/60 bg-\[#FFD700\]/5 text-\[#C0C4C8\]">
             Hire Me
           </a>
           <a href="/resume.pdf" download
@@ -864,10 +942,10 @@
         </div>
 
         <div class="mt-4 flex flex-wrap items-center gap-3 text-[11px] text-slate-400">
-          <span class="px-3 py-1 rounded-full border border-cyan-500/40 bg-cyan-500/10">
+          <span class="px-3 py-1 rounded-full border border-\[#FFD700\]/40 bg-\[#FFD700\]/10">
             WEBSITE • FLUTTER APPLICATION • CHROME EXTENSIONS
           </span>
-          <span class="px-3 py-1 rounded-full border border-cyan-500/20 bg-slate-900/70">
+          <span class="px-3 py-1 rounded-full border border-\[#FFD700\]/20 bg-slate-900/70">
             Clean Code & Performance
           </span>
         </div>
@@ -878,15 +956,16 @@
         <div class="glass-card rounded-3xl p-6 md:p-7 w-full max-w-sm md:max-w-md">
           <div class="relative">
             <div
-              class="absolute inset-0 rounded-3xl bg-gradient-to-tr from-cyan-500/30 via-transparent to-cyan-500/20 blur-3xl -z-10">
+              class="absolute inset-0 rounded-3xl bg-gradient-to-tr from-amber-500/30 via-transparent to-\[#FFD700\]/100/20 blur-3xl -z-10">
             </div>
             <lottie-player src="Login.json" background="transparent" speed="1" loop autoplay
-              class="w-full max-w-md rounded-3xl border border-cyan-400/70"></lottie-player></lottie-player>
+              class="w-full max-w-md rounded-3xl border border-\[#FFD700\]/70"></lottie-player></lottie-player>
           </div>
           <div class="mt-4 space-y-3 text-sm">
             <div class="flex items-center justify-between">
               <p class="font-semibold gradient-text" id="greetingMessage">GOOD MORNING</p>
-              <span class="px-2.5 py-1 rounded-full text-[11px] bg-cyan-500/15 border border-cyan-400/60 text-cyan-200">
+              <span
+                class="px-2.5 py-1 rounded-full text-[11px] bg-\[#FFD700\]/15 border border-\[#FFD700\]/60 text-\[#C0C4C8\]">
                 Available for work
               </span>
             </div>
@@ -915,7 +994,7 @@
   <section id="about" class="py-20 px-4">
     <div class="max-w-7xl mx-auto space-y-10">
       <div class="text-center space-y-3">
-        <p class="section-label text-base md:text-lg font-semibold text-cyan-300/80 tracking-[0.3em">
+        <p class="section-label text-base md:text-lg font-semibold text-\[#FFD700\] tracking-[0.3em">
           ABOUT
         </p>
         <h2 class="text-3xl md:text-4xl font-black">
@@ -929,8 +1008,8 @@
 
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
         <div class="glass-card rounded-2xl p-6">
-          
-          <h3 class="text-lg font-semibold mb-2 text-cyan-400">Identity</h3>
+
+          <h3 class="text-lg font-semibold mb-2 text-\[#FFD700\]">Identity</h3>
           <p class="text-sm text-slate-300">
             Developer crafting reliable solutions with an eye for detail and a <span
               class="font-semibold">user-first</span> mindset.
@@ -938,24 +1017,25 @@
         </div>
 
         <div class="glass-card rounded-2xl p-6">
-          
-          <h3 class="text-lg font-semibold mb-2 text-cyan-400">Professional</h3>
+
+          <h3 class="text-lg font-semibold mb-2 text-\[#FFD700\]">Professional</h3>
           <p class="text-sm text-slate-300">
             Experience across frontend and backend: React, Node.js, SQL, PHP and clean REST API design.
           </p>
         </div>
 
         <div class="glass-card rounded-2xl p-6">
-          
-          <h3 class="text-lg font-semibold mb-2 text-cyan-400">Education</h3>
+
+          <h3 class="text-lg font-semibold mb-2 text-\[#FFD700\]">Education</h3>
           <p class="text-sm text-slate-300">
-            BSc Computer Science from Mumbai University with a strong core in development, website flutter app & chrome extensions.
+            BSc Computer Science from Mumbai University with a strong core in development, website flutter app & chrome
+            extensions.
           </p>
         </div>
 
         <div class="glass-card rounded-2xl p-6">
-          
-          <h3 class="text-lg font-semibold mb-2 text-cyan-400">Interests</h3>
+
+          <h3 class="text-lg font-semibold mb-2 text-\[#FFD700\]">Interests</h3>
           <p class="text-sm text-slate-300">
             Gaming, travel and exploring new tech from UI patterns to <span class="font-semibold">AI-powered</span>
             tools.
@@ -968,595 +1048,267 @@
   <div class="section-divider"></div>
 
   <!-- Experience -->
-<section id="experience" class="py-20 px-4">
-  <div class="max-w-7xl mx-auto space-y-12">
-    <div class="text-center space-y-3">
-      <p class="section-label text-base md:text-lg font-semibold text-cyan-300/80 tracking-[0.3em]">
-        EXPERIENCE
-      </p>
-      <h2 class="text-3xl md:text-4xl font-black">
-        Professional <span class="gradient-text">journey</span>
-      </h2>
-      <p class="text-sm md:text-base text-slate-400 max-w-2xl mx-auto">
-        Blending product thinking with engineering discipline to deliver maintainable and
-        <span class="font-semibold">scalable</span> systems.
-      </p>
+  <section id="experience" class="py-20 px-4">
+    <div class="max-w-7xl mx-auto space-y-12">
+      <div class="text-center space-y-3">
+        <p class="section-label text-base md:text-lg font-semibold text-\[#FFD700\] tracking-[0.3em]">
+          EXPERIENCE
+        </p>
+        <h2 class="text-3xl md:text-4xl font-black">
+          Professional <span class="gradient-text">journey</span>
+        </h2>
+        <p class="text-sm md:text-base text-slate-400 max-w-2xl mx-auto">
+          Blending product thinking with engineering discipline to deliver maintainable and
+          <span class="font-semibold">scalable</span> systems.
+        </p>
+      </div>
+
+      <div class="relative timeline max-w-5xl mx-auto">
+
+        <!-- 1 -->
+        <div class="timeline-item relative md:w-1/2 md:pr-8 md:text-right mb-16">
+          <div class="timeline-content glass-card rounded-2xl p-6 ml-10 md:ml-0">
+            <p class="text-xs uppercase tracking-[0.25em] text-\[#FFD700\] mb-2">
+              2026 – Present
+            </p>
+            <h3 class="text-lg font-semibold text-\[#FFD700\]">Full Stack Developer</h3>
+            <p class="text-xs text-slate-400 mb-2">TechCorp Inc.</p>
+            <p class="text-sm text-slate-300">
+              Built scalable React + Node.js features and optimised SQL queries.
+            </p>
+          </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="timeline-item relative md:w-1/2 md:ml-auto md:pl-8 md:text-left mb-16">
+          <div class="timeline-content glass-card rounded-2xl p-6 ml-10 md:ml-0">
+            <p class="text-xs uppercase tracking-[0.25em] text-\[#FFD700\] mb-2">
+              2025
+            </p>
+            <h3 class="text-lg font-semibold text-\[#FFD700\]">Web Development Intern</h3>
+            <p class="text-xs text-slate-400 mb-2">StartupX</p>
+            <p class="text-sm text-slate-300">
+              Built UI components and assisted in backend endpoints.
+            </p>
+          </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="timeline-item relative md:w-1/2 md:pr-8 md:text-right mb-16">
+          <div class="timeline-content glass-card rounded-2xl p-6 ml-10 md:ml-0">
+            <p class="text-xs uppercase tracking-[0.25em] text-\[#FFD700\] mb-2">
+              2024
+            </p>
+            <h3 class="text-lg font-semibold text-\[#FFD700\]">Frontend Projects</h3>
+            <p class="text-xs text-slate-400 mb-2">Personal Work</p>
+            <p class="text-sm text-slate-300">
+              Created responsive websites using HTML, CSS, and JavaScript.
+            </p>
+          </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="timeline-item relative md:w-1/2 md:ml-auto md:pl-8 md:text-left">
+          <div class="timeline-content glass-card rounded-2xl p-6 ml-10 md:ml-0">
+            <p class="text-xs uppercase tracking-[0.25em] text-\[#FFD700\] mb-2">
+              2023
+            </p>
+            <h3 class="text-lg font-semibold text-\[#FFD700\]">Programming Student</h3>
+            <p class="text-xs text-slate-400 mb-2">College</p>
+            <p class="text-sm text-slate-300">
+              Learned core programming concepts in C++, Java, and Python.
+            </p>
+          </div>
+        </div>
+
+      </div>
     </div>
-
-    <div class="relative timeline max-w-5xl mx-auto">
-
-      <!-- 1 -->
-      <div class="timeline-item relative md:w-1/2 md:pr-8 md:text-right mb-16">
-        <div class="timeline-content glass-card rounded-2xl p-6 ml-10 md:ml-0">
-          <p class="text-xs uppercase tracking-[0.25em] text-cyan-300/80 mb-2">
-            2026 – Present
-          </p>
-          <h3 class="text-lg font-semibold text-cyan-300">Full Stack Developer</h3>
-          <p class="text-xs text-slate-400 mb-2">TechCorp Inc.</p>
-          <p class="text-sm text-slate-300">
-            Built scalable React + Node.js features and optimised SQL queries.
-          </p>
-        </div>
-      </div>
-
-      <!-- 2 -->
-      <div class="timeline-item relative md:w-1/2 md:ml-auto md:pl-8 md:text-left mb-16">
-        <div class="timeline-content glass-card rounded-2xl p-6 ml-10 md:ml-0">
-          <p class="text-xs uppercase tracking-[0.25em] text-cyan-300/80 mb-2">
-            2025
-          </p>
-          <h3 class="text-lg font-semibold text-cyan-300">Web Development Intern</h3>
-          <p class="text-xs text-slate-400 mb-2">StartupX</p>
-          <p class="text-sm text-slate-300">
-            Built UI components and assisted in backend endpoints.
-          </p>
-        </div>
-      </div>
-
-      <!-- 3 -->
-      <div class="timeline-item relative md:w-1/2 md:pr-8 md:text-right mb-16">
-        <div class="timeline-content glass-card rounded-2xl p-6 ml-10 md:ml-0">
-          <p class="text-xs uppercase tracking-[0.25em] text-cyan-300/80 mb-2">
-            2024
-          </p>
-          <h3 class="text-lg font-semibold text-cyan-300">Frontend Projects</h3>
-          <p class="text-xs text-slate-400 mb-2">Personal Work</p>
-          <p class="text-sm text-slate-300">
-            Created responsive websites using HTML, CSS, and JavaScript.
-          </p>
-        </div>
-      </div>
-
-      <!-- 4 -->
-      <div class="timeline-item relative md:w-1/2 md:ml-auto md:pl-8 md:text-left">
-        <div class="timeline-content glass-card rounded-2xl p-6 ml-10 md:ml-0">
-          <p class="text-xs uppercase tracking-[0.25em] text-cyan-300/80 mb-2">
-            2023
-          </p>
-          <h3 class="text-lg font-semibold text-cyan-300">Programming Student</h3>
-          <p class="text-xs text-slate-400 mb-2">College</p>
-          <p class="text-sm text-slate-300">
-            Learned core programming concepts in C++, Java, and Python.
-          </p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
+  </section>
 
 
   <div class="section-divider"></div>
 
-  <!-- Skills Section - UPDATED -->
+
+
+  <!-- Skills Section - CHIP LAYOUT -->
+
   <section id="skills" class="py-20 px-4">
-    <div class="max-w-7xl mx-auto space-y-16">
+
+    <div class="max-w-5xl mx-auto space-y-10">
+
+
 
       <!-- Header -->
+
       <div class="text-center space-y-4">
-        <p class="section-label text-xs font-semibold text-cyan-300/80 tracking-[0.35em]">
+
+        <p class="section-label text-xs font-semibold text-[#FFD700] tracking-[0.35em]">
+
           TECHNOLOGY STACK
+
         </p>
+
         <h1 class="text-4xl md:text-5xl xl:text-6xl font-black leading-tight">
+
           <span class="block text-slate-100">MODERN</span>
+
           <span class="block gradient-text">TECH STACK</span>
+
         </h1>
+
         <p class="text-base md:text-lg text-slate-300 max-w-2xl mx-auto">
+
           Explore cutting-edge technologies powering the next generation of <span class="font-semibold">web
             development</span>
+
         </p>
+
       </div>
 
-      <!-- Featured Section -->
-      <section class="space-y-8">
-        <div class="flex items-center justify-between">
-          <div>
-            <p class="section-label text-base md:text-lg font-semibold text-cyan-300/80 tracking-[0.3em]">
-              FEATURED
-            </p>
-            <div class="flex items-center gap-3">
-              
-              <h2 class="text-2xl md:text-3xl font-black">
-                Popular <span class="gradient-text">frameworks</span>
-              </h2>
+
+
+      <!-- Tech Container -->
+      <div class="tech-container space-y-8">
+
+        <!-- Featured -->
+        <div>
+
+          <h3 class="tech-category-title">Featured</h3>
+
+          <div class="flex flex-wrap gap-3">
+
+            <div class="tech-chip"><img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                alt="Node.js">Node.js</div>
+
+            <div class="tech-chip"><img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg"
+                alt="Flutter">Flutter</div>
+
+            <div class="tech-chip"><img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
+                alt="Tailwind CSS">Tailwind CSS</div>
+
+            <div class="tech-chip"><img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+                alt="TypeScript">TypeScript</div>
+
+            <div class="tech-chip"><img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">React
             </div>
+
           </div>
-          <span class="text-xs text-slate-400">3 technologies</span>
+
         </div>
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <!-- Node.js -->
-          <div class="tech-card rounded-2xl p-6 relative">
-            <div class="absolute top-3 right-3">
-              <div
-                class="popular-badge flex items-center gap-1 px-2.5 py-1 bg-cyan-500/20 border border-cyan-500/40 rounded-full">
-                <i class="fas fa-star text-cyan-400 text-xs"></i>
-                <span class="text-xs text-cyan-400 font-semibold">Hot</span>
-              </div>
+
+
+        <!-- Frontend -->
+
+        <div>
+
+          <h3 class="tech-category-title">Frontend</h3>
+
+          <div class="flex flex-wrap gap-3">
+
+            <div class="tech-chip"><img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">HTML</div>
+
+            <div class="tech-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                alt="CSS">CSS</div>
+
+            <div class="tech-chip"><img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                alt="JavaScript">JavaScript</div>
+
+            <div class="tech-chip"><img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+                alt="TypeScript">TypeScript</div>
+
+            <div class="tech-chip"><img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">React
             </div>
 
-            <div class="relative z-10 flex items-start gap-4">
-              <div
-                class="icon-glow w-14 h-14 rounded-xl bg-white flex items-center justify-center flex-shrink-0 border border-slate-200">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js"
-                  class="w-8 h-8">
-              </div>
-              <div class="flex-1 pt-1">
-                <h3 class="text-lg font-semibold text-slate-100 mb-1">Node.js</h3>
-                <p class="text-xs text-cyan-300/80 mb-2">Runtime</p>
-                <p class="text-sm text-slate-300">JavaScript runtime built on Chrome's V8 engine</p>
-              </div>
-            </div>
+            <div class="tech-chip"><img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
+                alt="Tailwind CSS">Tailwind CSS</div>
+
           </div>
 
-          <!-- Flutter -->
-          <div class="tech-card rounded-2xl p-6 relative">
-            <div class="absolute top-3 right-3">
-              <div
-                class="popular-badge flex items-center gap-1 px-2.5 py-1 bg-cyan-500/20 border border-cyan-500/40 rounded-full">
-                <i class="fas fa-star text-cyan-400 text-xs"></i>
-                <span class="text-xs text-cyan-400 font-semibold">Hot</span>
-              </div>
-            </div>
-
-            <div class="relative z-10 flex items-start gap-4">
-              <div
-                class="icon-glow w-14 h-14 rounded-xl bg-white flex items-center justify-center flex-shrink-0 border border-slate-200">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter"
-                  class="w-8 h-8">
-              </div>
-              <div class="flex-1 pt-1">
-                <h3 class="text-lg font-semibold text-slate-100 mb-1">Flutter</h3>
-                <p class="text-xs text-cyan-300/80 mb-2">Framework</p>
-                <p class="text-sm text-slate-300">Google's UI toolkit for building natively compiled applications</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Tailwind CSS -->
-          <div class="tech-card rounded-2xl p-6 relative">
-            <div class="absolute top-3 right-3">
-              <div
-                class="popular-badge flex items-center gap-1 px-2.5 py-1 bg-cyan-500/20 border border-cyan-500/40 rounded-full">
-                <i class="fas fa-star text-cyan-400 text-xs"></i>
-                <span class="text-xs text-cyan-400 font-semibold">Hot</span>
-              </div>
-            </div>
-
-            <div class="relative z-10 flex items-start gap-4">
-              <div
-                class="icon-glow w-14 h-14 rounded-xl bg-white flex items-center justify-center flex-shrink-0 border border-slate-200">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
-                  alt="Tailwind CSS" class="w-8 h-8">
-              </div>
-              <div class="flex-1 pt-1">
-                <h3 class="text-lg font-semibold text-slate-100 mb-1">Tailwind CSS</h3>
-                <p class="text-xs text-cyan-300/80 mb-2">Styling</p>
-                <p class="text-sm text-slate-300">Utility-first CSS framework for rapid UI development</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <div class="section-divider"></div>
-
-      <!-- Frontend Section -->
-      <section class="space-y-8">
-        <div class="flex items-center justify-between">
-          <div>
-            <p class="section-label text-base md:text-lg font-semibold text-cyan-300/80 tracking-[0.3em]">
-              FRONTEND
-            </p>
-            <div class="flex items-center gap-3">
-              
-              <h2 class="text-2xl md:text-3xl font-black">
-                Client-side <span class="gradient-text">technologies</span>
-              </h2>
-            </div>
-          </div>
-          <span class="text-xs text-slate-400">6 technologies</span>
         </div>
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <!-- HTML -->
-          <div class="tech-card rounded-2xl p-6 relative">
-            <div class="relative z-10 flex items-start gap-4">
-              <div
-                class="icon-glow w-14 h-14 rounded-xl bg-white flex items-center justify-center flex-shrink-0 border border-slate-200">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML"
-                  class="w-8 h-8">
-              </div>
-              <div class="flex-1 pt-1">
-                <h3 class="text-lg font-semibold text-slate-100 mb-1">HTML</h3>
-                <p class="text-xs text-cyan-300/80 mb-2">Markup</p>
-                <p class="text-sm text-slate-300">Standard markup language for web pages</p>
-              </div>
+
+
+        <!-- Backend & APIs -->
+
+        <div>
+
+          <h3 class="tech-category-title">Backend & APIs</h3>
+
+          <div class="flex flex-wrap gap-3">
+
+            <div class="tech-chip"><img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                alt="Node.js">Node.js</div>
+
+            <div class="tech-chip"><img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">Python
             </div>
+
+            <div class="tech-chip"><img src="https://cdn.simpleicons.org/fastapi/009688" alt="FastAPI">FastAPI</div>
+
+            <div class="tech-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+                alt="Java">Java</div>
+
+            <div class="tech-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg"
+                alt="Dart">Dart</div>
+
+            <div class="tech-chip"><img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+                alt="MongoDB">MongoDB</div>
+
+            <div class="tech-chip"><img src="https://cdn.simpleicons.org/postman/FF6C37" alt="REST APIs">REST APIs</div>
+
           </div>
 
-          <!-- CSS -->
-          <div class="tech-card rounded-2xl p-6 relative">
-            <div class="relative z-10 flex items-start gap-4">
-              <div
-                class="icon-glow w-14 h-14 rounded-xl bg-white flex items-center justify-center flex-shrink-0 border border-slate-200">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS"
-                  class="w-8 h-8">
-              </div>
-              <div class="flex-1 pt-1">
-                <h3 class="text-lg font-semibold text-slate-100 mb-1">CSS</h3>
-                <p class="text-xs text-cyan-300/80 mb-2">Styling</p>
-                <p class="text-sm text-slate-300">Style sheet language for presentation</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- JavaScript -->
-          <div class="tech-card rounded-2xl p-6 relative">
-            <div class="absolute top-3 right-3">
-              <div
-                class="popular-badge flex items-center gap-1 px-2.5 py-1 bg-cyan-500/20 border border-cyan-500/40 rounded-full">
-                <i class="fas fa-star text-cyan-400 text-xs"></i>
-                <span class="text-xs text-cyan-400 font-semibold">Hot</span>
-              </div>
-            </div>
-
-            <div class="relative z-10 flex items-start gap-4">
-              <div
-                class="icon-glow w-14 h-14 rounded-xl bg-white flex items-center justify-center flex-shrink-0 border border-slate-200">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-                  alt="JavaScript" class="w-8 h-8">
-              </div>
-              <div class="flex-1 pt-1">
-                <h3 class="text-lg font-semibold text-slate-100 mb-1">JavaScript</h3>
-                <p class="text-xs text-cyan-300/80 mb-2">Language</p>
-                <p class="text-sm text-slate-300">Programming language of the web</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- TypeScript -->
-          <div class="tech-card rounded-2xl p-6 relative">
-            <div class="absolute top-3 right-3">
-              <div
-                class="popular-badge flex items-center gap-1 px-2.5 py-1 bg-cyan-500/20 border border-cyan-500/40 rounded-full">
-                <i class="fas fa-star text-cyan-400 text-xs"></i>
-                <span class="text-xs text-cyan-400 font-semibold">Hot</span>
-              </div>
-            </div>
-
-            <div class="relative z-10 flex items-start gap-4">
-              <div
-                class="icon-glow w-14 h-14 rounded-xl bg-white flex items-center justify-center flex-shrink-0 border border-slate-200">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
-                  alt="TypeScript" class="w-8 h-8">
-              </div>
-              <div class="flex-1 pt-1">
-                <h3 class="text-lg font-semibold text-slate-100 mb-1">TypeScript</h3>
-                <p class="text-xs text-cyan-300/80 mb-2">Language</p>
-                <p class="text-sm text-slate-300">JavaScript with syntax for types</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- React -->
-          <div class="tech-card rounded-2xl p-6 relative">
-            <div class="absolute top-3 right-3">
-              <div
-                class="popular-badge flex items-center gap-1 px-2.5 py-1 bg-cyan-500/20 border border-cyan-500/40 rounded-full">
-                <i class="fas fa-star text-cyan-400 text-xs"></i>
-                <span class="text-xs text-cyan-400 font-semibold">Hot</span>
-              </div>
-            </div>
-
-            <div class="relative z-10 flex items-start gap-4">
-              <div
-                class="icon-glow w-14 h-14 rounded-xl bg-white flex items-center justify-center flex-shrink-0 border border-slate-200">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React"
-                  class="w-8 h-8">
-              </div>
-              <div class="flex-1 pt-1">
-                <h3 class="text-lg font-semibold text-slate-100 mb-1">React</h3>
-                <p class="text-xs text-cyan-300/80 mb-2">Library</p>
-                <p class="text-sm text-slate-300">Component-based UI library for building interfaces</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Tailwind CSS -->
-          <div class="tech-card rounded-2xl p-6 relative">
-            <div class="relative z-10 flex items-start gap-4">
-              <div
-                class="icon-glow w-14 h-14 rounded-xl bg-white flex items-center justify-center flex-shrink-0 border border-slate-200">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
-                  alt="Tailwind CSS" class="w-8 h-8">
-              </div>
-              <div class="flex-1 pt-1">
-                <h3 class="text-lg font-semibold text-slate-100 mb-1">Tailwind CSS</h3>
-                <p class="text-xs text-cyan-300/80 mb-2">Framework</p>
-                <p class="text-sm text-slate-300">Utility-first CSS framework for rapid UI development</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <div class="section-divider"></div>
-
-      <!-- Backend & APIs Section -->
-      <section class="space-y-8">
-        <div class="flex items-center justify-between">
-          <div>
-            <p class="section-label text-base md:text-lg font-semibold text-cyan-300/80 tracking-[0.3em]">
-              BACKEND & APIs
-            </p>
-            <div class="flex items-center gap-3">
-              
-              <h2 class="text-2xl md:text-3xl font-black">
-                Server-side <span class="gradient-text">power</span>
-              </h2>
-            </div>
-          </div>
-          <span class="text-xs text-slate-400">6 technologies</span>
         </div>
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <!-- Python -->
-          <div class="tech-card rounded-2xl p-6 relative">
-            <div class="absolute top-3 right-3">
-              <div
-                class="popular-badge flex items-center gap-1 px-2.5 py-1 bg-cyan-500/20 border border-cyan-500/40 rounded-full">
-                <i class="fas fa-star text-cyan-400 text-xs"></i>
-                <span class="text-xs text-cyan-400 font-semibold">Hot</span>
-              </div>
+
+
+        <!-- AI & Dev Tools -->
+
+        <div>
+
+          <h3 class="tech-category-title">AI & Dev Tools</h3>
+
+          <div class="flex flex-wrap gap-3">
+
+            <div class="tech-chip"><img src="https://cdn.simpleicons.org/anthropic/white" alt="Claude">Claude Code</div>
+
+            <div class="tech-chip"><img src="https://cdn.simpleicons.org/perplexity/white" alt="Perplexity">Perplexity
             </div>
 
-            <div class="relative z-10 flex items-start gap-4">
-              <div
-                class="icon-glow w-14 h-14 rounded-xl bg-white flex items-center justify-center flex-shrink-0 border border-slate-200">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"
-                  class="w-8 h-8">
-              </div>
-              <div class="flex-1 pt-1">
-                <h3 class="text-lg font-semibold text-slate-100 mb-1">Python</h3>
-                <p class="text-xs text-cyan-300/80 mb-2">Language</p>
-                <p class="text-sm text-slate-300">High-level programming language for backends</p>
-              </div>
-            </div>
+            <div class="tech-chip"><img src="Comet-browser-logo.png" alt="Comet">Comet</div>
+
+            <div class="tech-chip"><img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code">VS
+              Code</div>
+
+            <div class="tech-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+                alt="Git">Git</div>
+
+            <div class="tech-chip"><img src="https://cdn.simpleicons.org/github/white" alt="GitHub">GitHub</div>
+
           </div>
 
-          <!-- Java -->
-          <div class="tech-card rounded-2xl p-6 relative">
-            <div class="absolute top-3 right-3">
-              <div
-                class="popular-badge flex items-center gap-1 px-2.5 py-1 bg-cyan-500/20 border border-cyan-500/40 rounded-full">
-                <i class="fas fa-star text-cyan-400 text-xs"></i>
-                <span class="text-xs text-cyan-400 font-semibold">Hot</span>
-              </div>
-            </div>
-
-            <div class="relative z-10 flex items-start gap-4">
-              <div
-                class="icon-glow w-14 h-14 rounded-xl bg-white flex items-center justify-center flex-shrink-0 border border-slate-200">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java"
-                  class="w-8 h-8">
-              </div>
-              <div class="flex-1 pt-1">
-                <h3 class="text-lg font-semibold text-slate-100 mb-1">Java</h3>
-                <p class="text-xs text-cyan-300/80 mb-2">Language</p>
-                <p class="text-sm text-slate-300">Object-oriented programming language for enterprise applications</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- FastAPI -->
-          <div class="tech-card rounded-2xl p-6 relative">
-            <div class="relative z-10 flex items-start gap-4">
-              <div
-                class="icon-glow w-14 h-14 rounded-xl bg-white flex items-center justify-center flex-shrink-0 border border-slate-200">
-                <img src="https://cdn.simpleicons.org/fastapi/009688" alt="FastAPI" class="w-8 h-8">
-              </div>
-              <div class="flex-1 pt-1">
-                <h3 class="text-lg font-semibold text-slate-100 mb-1">FastAPI</h3>
-                <p class="text-xs text-cyan-300/80 mb-2">Framework</p>
-                <p class="text-sm text-slate-300">Modern, fast Python web framework for building APIs</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Dart -->
-          <div class="tech-card rounded-2xl p-6 relative">
-            <div class="relative z-10 flex items-start gap-4">
-              <div
-                class="icon-glow w-14 h-14 rounded-xl bg-white flex items-center justify-center flex-shrink-0 border border-slate-200">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" alt="Dart"
-                  class="w-8 h-8">
-              </div>
-              <div class="flex-1 pt-1">
-                <h3 class="text-lg font-semibold text-slate-100 mb-1">Dart</h3>
-                <p class="text-xs text-cyan-300/80 mb-2">Language</p>
-                <p class="text-sm text-slate-300">Client-optimized language for fast apps on any platform</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- MongoDB -->
-          <div class="tech-card rounded-2xl p-6 relative">
-            <div class="relative z-10 flex items-start gap-4">
-              <div
-                class="icon-glow w-14 h-14 rounded-xl bg-white flex items-center justify-center flex-shrink-0 border border-slate-200">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB"
-                  class="w-8 h-8">
-              </div>
-              <div class="flex-1 pt-1">
-                <h3 class="text-lg font-semibold text-slate-100 mb-1">MongoDB</h3>
-                <p class="text-xs text-cyan-300/80 mb-2">Database</p>
-                <p class="text-sm text-slate-300">Document-based NoSQL database for modern applications</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- REST APIs -->
-          <div class="tech-card rounded-2xl p-6 relative">
-            <div class="relative z-10 flex items-start gap-4">
-              <div
-                class="icon-glow w-14 h-14 rounded-xl bg-white flex items-center justify-center flex-shrink-0 border border-slate-200">
-                <img src="https://cdn.simpleicons.org/postman/FF6C37" alt="REST APIs" class="w-8 h-8">
-              </div>
-              <div class="flex-1 pt-1">
-                <h3 class="text-lg font-semibold text-slate-100 mb-1">REST APIs</h3>
-                <p class="text-xs text-cyan-300/80 mb-2">Architecture</p>
-                <p class="text-sm text-slate-300">RESTful API design and implementation</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <div class="section-divider"></div>
-
-      <!-- AI & Dev Tools Section -->
-      <section class="space-y-8">
-        <div class="flex items-center justify-between">
-          <div>
-            <p class="section-label text-base md:text-lg font-semibold text-cyan-300/80 tracking-[0.3em]">
-              AI & DEV TOOLS
-            </p>
-            <div class="flex items-center gap-3">
-              
-              <h2 class="text-2xl md:text-3xl font-black">
-                Innovation <span class="gradient-text">ecosystem</span>
-              </h2>
-            </div>
-          </div>
-          <span class="text-xs text-slate-400">6 technologies</span>
         </div>
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <!-- Git -->
-          <div class="tech-card rounded-2xl p-6 relative">
-            <div class="absolute top-3 right-3">
-              <div
-                class="popular-badge flex items-center gap-1 px-2.5 py-1 bg-cyan-500/20 border border-cyan-500/40 rounded-full">
-                <i class="fas fa-star text-cyan-400 text-xs"></i>
-                <span class="text-xs text-cyan-400 font-semibold">Hot</span>
-              </div>
-            </div>
-
-            <div class="relative z-10 flex items-start gap-4">
-              <div
-                class="icon-glow w-14 h-14 rounded-xl bg-white flex items-center justify-center flex-shrink-0 border border-slate-200">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git"
-                  class="w-8 h-8">
-              </div>
-              <div class="flex-1 pt-1">
-                <h3 class="text-lg font-semibold text-slate-100 mb-1">Git</h3>
-                <p class="text-xs text-cyan-300/80 mb-2">Version Control</p>
-                <p class="text-sm text-slate-300">Distributed version control system for tracking changes</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- GitHub -->
-          <div class="tech-card rounded-2xl p-6 relative">
-            <div class="relative z-10 flex items-start gap-4">
-              <div
-                class="icon-glow w-14 h-14 rounded-xl bg-slate-100/10 flex items-center justify-center flex-shrink-0 border border-slate-100/20">
-                <img src="https://cdn.simpleicons.org/github/white" alt="GitHub" class="w-8 h-8">
-              </div>
-              <div class="flex-1 pt-1">
-                <h3 class="text-lg font-semibold text-slate-100 mb-1">GitHub</h3>
-                <p class="text-xs text-cyan-300/80 mb-2">Platform</p>
-                <p class="text-sm text-slate-300">Code hosting platform for version control and collaboration</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Comet -->
-          <div class="tech-card rounded-2xl p-6 relative">
-            <div class="relative z-10 flex items-start gap-4">
-              <div
-                class="icon-glow w-14 h-14 rounded-xl bg-white flex items-center justify-center flex-shrink-0 border border-slate-200">
-                <img src="Comet-browser-logo.png" alt="Comet" class="w-8 h-8 object-contain">
-              </div>
-              <div class="flex-1 pt-1">
-                <h3 class="text-lg font-semibold text-slate-100 mb-1">Comet</h3>
-                <p class="text-xs text-cyan-300/80 mb-2">AI Browser</p>
-                <p class="text-sm text-slate-300">Perplexity's AI-powered web browser with smart assistant</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Perplexity -->
-          <div class="tech-card rounded-2xl p-6 relative">
-            <div class="relative z-10 flex items-start gap-4">
-              <div
-                class="icon-glow w-14 h-14 rounded-xl bg-slate-100/10 flex items-center justify-center flex-shrink-0 border border-slate-100/20">
-                <img src="https://cdn.simpleicons.org/perplexity/white" alt="Perplexity" class="w-8 h-8">
-              </div>
-              <div class="flex-1 pt-1">
-                <h3 class="text-lg font-semibold text-slate-100 mb-1">Perplexity</h3>
-                <p class="text-xs text-cyan-300/80 mb-2">AI Search</p>
-                <p class="text-sm text-slate-300">AI-powered search engine for developers</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Claude -->
-          <div class="tech-card rounded-2xl p-6 relative">
-            <div class="relative z-10 flex items-start gap-4">
-              <div
-                class="icon-glow w-14 h-14 rounded-xl bg-slate-100/10 flex items-center justify-center flex-shrink-0 border border-slate-100/20">
-                <img src="https://cdn.simpleicons.org/anthropic/white" alt="Claude" class="w-8 h-8">
-              </div>
-              <div class="flex-1 pt-1">
-                <h3 class="text-lg font-semibold text-slate-100 mb-1">Claude</h3>
-                <p class="text-xs text-cyan-300/80 mb-2">AI Assistant</p>
-                <p class="text-sm text-slate-300">Advanced AI assistant for coding and problem-solving</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- VS Code -->
-          <div class="tech-card rounded-2xl p-6 relative">
-            <div class="relative z-10 flex items-start gap-4">
-              <div
-                class="icon-glow w-14 h-14 rounded-xl bg-white flex items-center justify-center flex-shrink-0 border border-slate-200">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code"
-                  class="w-8 h-8">
-              </div>
-              <div class="flex-1 pt-1">
-                <h3 class="text-lg font-semibold text-slate-100 mb-1">VS Code</h3>
-                <p class="text-xs text-cyan-300/80 mb-2">Editor</p>
-                <p class="text-sm text-slate-300">Powerful code editor with extensive extensions</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      </div> <!-- end tech-container -->
 
     </div>
+
   </section>
+
 
   <div class="section-divider"></div>
 
@@ -1564,7 +1316,7 @@
   <section id="projects" class="py-20 px-4">
     <div class="max-w-7xl mx-auto space-y-10">
       <div class="text-center space-y-3">
-        <p class="section-label text-base md:text-lg font-semibold text-cyan-300/80 tracking-[0.3em]">
+        <p class="section-label text-base md:text-lg font-semibold text-\[#FFD700\] tracking-[0.3em]">
           PROJECTS
         </p>
         <h2 class="text-3xl md:text-4xl font-black">
@@ -1578,8 +1330,9 @@
 
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- Memory game -->
-        <div class="project-card glass-card rounded-2xl border border-cyan-500/35 overflow-hidden">
-          <div class="h-44 bg-gradient-to-br from-cyan-600 via-cyan-500 to-slate-900 flex items-center justify-center">
+        <div class="project-card glass-card rounded-2xl overflow-hidden">
+          <div
+            class="h-44 bg-gradient-to-br from-\[#FFD700\] via-\[#FFD700\] to-slate-900 flex items-center justify-center">
             <span class="text-5xl">🧠</span>
           </div>
           <div class="p-6 space-y-4">
@@ -1588,9 +1341,9 @@
               Interactive memory game with animated cards, streak tracking and saved scores via browser storage.
             </p>
             <div class="flex flex-wrap gap-2 text-xs">
-              <span class="px-3 py-1 rounded-full bg-cyan-500/15 text-cyan-200">JavaScript</span>
-              <span class="px-3 py-1 rounded-full bg-cyan-500/15 text-cyan-200">CSS Animations</span>
-              <span class="px-3 py-1 rounded-full bg-cyan-500/15 text-cyan-200">HTML</span>
+              <span class="px-3 py-1 rounded-full bg-\[#FFD700\]/15 text-\[#C0C4C8\]">JavaScript</span>
+              <span class="px-3 py-1 rounded-full bg-\[#FFD700\]/15 text-\[#C0C4C8\]">CSS Animations</span>
+              <span class="px-3 py-1 rounded-full bg-\[#FFD700\]/15 text-\[#C0C4C8\]">HTML</span>
             </div>
             <div class="flex gap-3 pt-1 text-sm">
               <a href="https://github.com/vivekx11/memorygame" target="_blank"
@@ -1606,8 +1359,9 @@
         </div>
 
         <!-- College event -->
-        <div class="project-card glass-card rounded-2xl border border-cyan-500/35 overflow-hidden">
-          <div class="h-44 bg-gradient-to-br from-blue-600 via-cyan-500 to-slate-900 flex items-center justify-center">
+        <div class="project-card glass-card rounded-2xl overflow-hidden">
+          <div
+            class="h-44 bg-gradient-to-br from-\[#0a1e42\] via-\[#FFD700\] to-slate-900 flex items-center justify-center">
             <span class="text-5xl">🎓</span>
           </div>
           <div class="p-6 space-y-4">
@@ -1617,9 +1371,9 @@
               Node.js setup.
             </p>
             <div class="flex flex-wrap gap-2 text-xs">
-              <span class="px-3 py-1 rounded-full bg-cyan-500/15 text-cyan-200">React</span>
-              <span class="px-3 py-1 rounded-full bg-cyan-500/15 text-cyan-200">Node.js</span>
-              <span class="px-3 py-1 rounded-full bg-cyan-500/15 text-cyan-200">SQL</span>
+              <span class="px-3 py-1 rounded-full bg-\[#FFD700\]/15 text-\[#C0C4C8\]">React</span>
+              <span class="px-3 py-1 rounded-full bg-\[#FFD700\]/15 text-\[#C0C4C8\]">Node.js</span>
+              <span class="px-3 py-1 rounded-full bg-\[#FFD700\]/15 text-\[#C0C4C8\]">SQL</span>
             </div>
             <div class="flex gap-3 pt-1 text-sm">
               <a href="https://github.com/vivekx11/CODETECH" target="_blank"
@@ -1635,8 +1389,9 @@
         </div>
 
         <!-- College event -->
-        <div class="project-card glass-card rounded-2xl border border-cyan-500/35 overflow-hidden">
-          <div class="h-44 bg-gradient-to-br from-blue-600 via-cyan-500 to-slate-900 flex items-center justify-center">
+        <div class="project-card glass-card rounded-2xl overflow-hidden">
+          <div
+            class="h-44 bg-gradient-to-br from-\[#0a1e42\] via-\[#FFD700\] to-slate-900 flex items-center justify-center">
             <span class="text-5xl">🎓</span>
           </div>
           <div class="p-6 space-y-4">
@@ -1646,9 +1401,9 @@
               Node.js setup.
             </p>
             <div class="flex flex-wrap gap-2 text-xs">
-              <span class="px-3 py-1 rounded-full bg-cyan-500/15 text-cyan-200">React</span>
-              <span class="px-3 py-1 rounded-full bg-cyan-500/15 text-cyan-200">Node.js</span>
-              <span class="px-3 py-1 rounded-full bg-cyan-500/15 text-cyan-200">SQL</span>
+              <span class="px-3 py-1 rounded-full bg-\[#FFD700\]/15 text-\[#C0C4C8\]">React</span>
+              <span class="px-3 py-1 rounded-full bg-\[#FFD700\]/15 text-\[#C0C4C8\]">Node.js</span>
+              <span class="px-3 py-1 rounded-full bg-\[#FFD700\]/15 text-\[#C0C4C8\]">SQL</span>
             </div>
             <div class="flex gap-3 pt-1 text-sm">
               <a href="https://github.com/vivekx11/CODETECH" target="_blank"
@@ -1664,8 +1419,9 @@
         </div>
 
         <!-- College event -->
-        <div class="project-card glass-card rounded-2xl border border-cyan-500/35 overflow-hidden">
-          <div class="h-44 bg-gradient-to-br from-blue-600 via-cyan-500 to-slate-900 flex items-center justify-center">
+        <div class="project-card glass-card rounded-2xl overflow-hidden">
+          <div
+            class="h-44 bg-gradient-to-br from-\[#0a1e42\] via-\[#FFD700\] to-slate-900 flex items-center justify-center">
             <span class="text-5xl">🎓</span>
           </div>
           <div class="p-6 space-y-4">
@@ -1675,9 +1431,9 @@
               Node.js setup.
             </p>
             <div class="flex flex-wrap gap-2 text-xs">
-              <span class="px-3 py-1 rounded-full bg-cyan-500/15 text-cyan-200">React</span>
-              <span class="px-3 py-1 rounded-full bg-cyan-500/15 text-cyan-200">Node.js</span>
-              <span class="px-3 py-1 rounded-full bg-cyan-500/15 text-cyan-200">SQL</span>
+              <span class="px-3 py-1 rounded-full bg-\[#FFD700\]/15 text-\[#C0C4C8\]">React</span>
+              <span class="px-3 py-1 rounded-full bg-\[#FFD700\]/15 text-\[#C0C4C8\]">Node.js</span>
+              <span class="px-3 py-1 rounded-full bg-\[#FFD700\]/15 text-\[#C0C4C8\]">SQL</span>
             </div>
             <div class="flex gap-3 pt-1 text-sm">
               <a href="https://github.com/vivekx11/CODETECH" target="_blank"
@@ -1693,8 +1449,9 @@
         </div>
 
         <!-- College event -->
-        <div class="project-card glass-card rounded-2xl border border-cyan-500/35 overflow-hidden">
-          <div class="h-44 bg-gradient-to-br from-blue-600 via-cyan-500 to-slate-900 flex items-center justify-center">
+        <div class="project-card glass-card rounded-2xl overflow-hidden">
+          <div
+            class="h-44 bg-gradient-to-br from-\[#0a1e42\] via-\[#FFD700\] to-slate-900 flex items-center justify-center">
             <span class="text-5xl">🎓</span>
           </div>
           <div class="p-6 space-y-4">
@@ -1704,9 +1461,9 @@
               Node.js setup.
             </p>
             <div class="flex flex-wrap gap-2 text-xs">
-              <span class="px-3 py-1 rounded-full bg-cyan-500/15 text-cyan-200">React</span>
-              <span class="px-3 py-1 rounded-full bg-cyan-500/15 text-cyan-200">Node.js</span>
-              <span class="px-3 py-1 rounded-full bg-cyan-500/15 text-cyan-200">SQL</span>
+              <span class="px-3 py-1 rounded-full bg-\[#FFD700\]/15 text-\[#C0C4C8\]">React</span>
+              <span class="px-3 py-1 rounded-full bg-\[#FFD700\]/15 text-\[#C0C4C8\]">Node.js</span>
+              <span class="px-3 py-1 rounded-full bg-\[#FFD700\]/15 text-\[#C0C4C8\]">SQL</span>
             </div>
             <div class="flex gap-3 pt-1 text-sm">
               <a href="https://github.com/vivekx11/CODETECH" target="_blank"
@@ -1722,8 +1479,9 @@
         </div>
 
         <!-- Mindfulness app -->
-        <div class="project-card glass-card rounded-2xl border border-cyan-500/35 overflow-hidden">
-          <div class="h-44 bg-gradient-to-br from-cyan-600 via-lime-500 to-slate-900 flex items-center justify-center">
+        <div class="project-card glass-card rounded-2xl overflow-hidden">
+          <div
+            class="h-44 bg-gradient-to-br from-\[#FFD700\] via-lime-500 to-slate-900 flex items-center justify-center">
             <span class="text-5xl">🧘</span>
           </div>
           <div class="p-6 space-y-4">
@@ -1733,9 +1491,9 @@
               storage.
             </p>
             <div class="flex flex-wrap gap-2 text-xs">
-              <span class="px-3 py-1 rounded-full bg-cyan-500/15 text-cyan-200">Kotlin</span>
-              <span class="px-3 py-1 rounded-full bg-cyan-500/15 text-cyan-200">Android Studio</span>
-              <span class="px-3 py-1 rounded-full bg-cyan-500/15 text-cyan-200">Firebase</span>
+              <span class="px-3 py-1 rounded-full bg-\[#FFD700\]/15 text-\[#C0C4C8\]">Kotlin</span>
+              <span class="px-3 py-1 rounded-full bg-\[#FFD700\]/15 text-\[#C0C4C8\]">Android Studio</span>
+              <span class="px-3 py-1 rounded-full bg-\[#FFD700\]/15 text-\[#C0C4C8\]">Firebase</span>
             </div>
             <div class="flex gap-3 pt-1 text-sm">
               <a href="https://github.com/vivekx11/Mindfullness" target="_blank"
@@ -1759,7 +1517,7 @@
   <section id="blog" class="py-20 px-4">
     <div class="max-w-7xl mx-auto space-y-10">
       <div class="text-center space-y-3">
-        <p class="section-label text-base md:text-lg font-semibold text-cyan-300/80 tracking-[0.3em">
+        <p class="section-label text-base md:text-lg font-semibold text-\[#FFD700\] tracking-[0.3em">
           BLOG
         </p>
         <h2 class="text-3xl md:text-4xl font-black">
@@ -1773,7 +1531,7 @@
 
       <div class="grid md:grid-cols-3 gap-6">
         <article class="blog-card rounded-2xl p-6">
-          <p class="text-xs text-cyan-300/80 uppercase tracking-[0.18em] mb-2">
+          <p class="text-xs text-\[#FFD700\] uppercase tracking-[0.18em] mb-2">
             React • Hooks
           </p>
           <h3 class="text-lg font-semibold text-slate-100 mb-2">Mastering React Hooks</h3>
@@ -1781,26 +1539,26 @@
             Practical patterns with useState, useEffect and custom hooks to keep components predictable and <span
               class="font-semibold">clean</span>.
           </p>
-          <a href="#" class="text-xs font-semibold text-cyan-300">
+          <a href="#" class="text-xs font-semibold text-\[#FFD700\]">
             Read More →
           </a>
         </article>
 
         <article class="blog-card rounded-2xl p-6">
-          <p class="text-xs text-cyan-300/80 uppercase tracking-[0.18em] mb-2">
+          <p class="text-xs text-\[#FFD700\] uppercase tracking-[0.18em] mb-2">
             Node.js • APIs
           </p>
           <h3 class="text-lg font-semibold text-slate-100 mb-2">Building Scalable Node.js APIs</h3>
           <p class="text-sm text-slate-300 mb-3">
             Using Express, modular routing and middleware to design predictable, extendable REST services.
           </p>
-          <a href="#" class="text-xs font-semibold text-cyan-300">
+          <a href="#" class="text-xs font-semibold text-\[#FFD700\]">
             Read More →
           </a>
         </article>
 
         <article class="blog-card rounded-2xl p-6">
-          <p class="text-xs text-cyan-300/80 uppercase tracking-[0.18em] mb-2">
+          <p class="text-xs text-\[#FFD700\] uppercase tracking-[0.18em] mb-2">
             Trends
           </p>
           <h3 class="text-lg font-semibold text-slate-100 mb-2">Future of Web Development</h3>
@@ -1808,7 +1566,7 @@
             Exploring Web3, AI integrations and how PWAs are reshaping <span class="font-semibold">experience</span>
             design.
           </p>
-          <a href="#" class="text-xs font-semibold text-cyan-300">
+          <a href="#" class="text-xs font-semibold text-\[#FFD700\]">
             Read More →
           </a>
         </article>
@@ -1822,7 +1580,7 @@
   <section id="testimonials" class="py-20 px-4">
     <div class="max-w-7xl mx-auto space-y-10">
       <div class="text-center space-y-3">
-        <p class="section-label text-base md:text-lg font-semibold text-cyan-300/80 tracking-[0.3em">
+        <p class="section-label text-base md:text-lg font-semibold text-\[#FFD700\] tracking-[0.3em">
           TESTIMONIALS
         </p>
         <h2 class="text-3xl md:text-4xl font-black">
@@ -1888,7 +1646,7 @@
   <section id="contact" class="py-20 px-4">
     <div class="max-w-3xl mx-auto space-y-10">
       <div class="text-center space-y-3">
-        <p class="section-label text-base md:text-lg font-semibold text-cyan-300/80 tracking-[0.3em">
+        <p class="section-label text-base md:text-lg font-semibold text-\[#FFD700\] tracking-[0.3em">
           CONTACT
         </p>
         <h2 class="text-3xl md:text-4xl font-black">
@@ -1904,17 +1662,18 @@
         <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" class="space-y-5">
           <!-- Web3Forms Access Key -->
           <input type="hidden" name="access_key" value="f87d2809-b6f2-41dc-b87e-9ac33a696304">
-          
+
           <!-- Honeypot Spam Protection -->
           <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
-          
+
           <!-- Success/Error Messages -->
           <div id="formMessage" class="hidden p-4 rounded-xl text-sm font-semibold"></div>
 
           <div class="grid md:grid-cols-2 gap-4">
             <div>
               <label class="block text-xs font-medium text-slate-300 mb-1.5">Name</label>
-              <input type="text" name="name" required class="input-field w-full px-4 py-2.5 text-sm text-slate-100" placeholder="John Doe" />
+              <input type="text" name="name" required class="input-field w-full px-4 py-2.5 text-sm text-slate-100"
+                placeholder="John Doe" />
             </div>
             <div>
               <label class="block text-xs font-medium text-slate-300 mb-1.5">Email</label>
@@ -1931,7 +1690,8 @@
 
           <div>
             <label class="block text-xs font-medium text-slate-300 mb-1.5">Message</label>
-            <textarea rows="5" name="message" required class="input-field w-full px-4 py-2.5 text-sm text-slate-100 resize-none"
+            <textarea rows="5" name="message" required
+              class="input-field w-full px-4 py-2.5 text-sm text-slate-100 resize-none"
               placeholder="Share details about scope, deadlines, and expectations."></textarea>
           </div>
 
@@ -1951,9 +1711,9 @@
         const btnLoader = document.getElementById('btnLoader');
         const formMessage = document.getElementById('formMessage');
 
-        form.addEventListener('submit', async function(e) {
+        form.addEventListener('submit', async function (e) {
           e.preventDefault();
-          
+
           // Show loading state
           submitBtn.disabled = true;
           btnText.classList.add('hidden');
@@ -1996,15 +1756,15 @@
   </section>
 
   <!-- Footer -->
-  <footer class="border-t border-cyan-500/30 bg-black">
+  <footer class="border-t border-\[#FFD700\]/30 bg-black">
     <div
       class="max-w-7xl mx-auto px-4 py-10 flex flex-col md:flex-row items-center md:items-start justify-between gap-8">
 
       <!-- Brand + mini bio -->
       <div class="flex items-center gap-4">
         <div
-          class="w-10 h-10 rounded-2xl bg-cyan-500/15 border border-cyan-400/70 flex items-center justify-center shadow-lg shadow-cyan-500/30">
-          <span class="text-[11px] font-bold tracking-[0.22em] text-cyan-200">VS</span>
+          class="w-10 h-10 rounded-2xl bg-\[#FFD700\]/15 border border-\[#FFD700\]/70 flex items-center justify-center shadow-lg shadow-\[#FFD700\]/30">
+          <span class="text-[11px] font-bold tracking-[0.22em] text-\[#C0C4C8\]">VS</span>
         </div>
         <div>
           <p class="text-sm font-semibold text-slate-100 tracking-[0.2em] uppercase">
@@ -2031,23 +1791,27 @@
       <!-- Social + copyright -->
       <div class="text-center md:text-right text-xs text-slate-400 space-y-3">
         <div class="flex justify-center md:justify-end gap-3 text-slate-300">
-          <a href="https://github.com/vivekx11" target="_blank" class="w-9 h-9 rounded-full bg-slate-900/80 border border-slate-700 flex items-center justify-center transition">
+          <a href="https://github.com/vivekx11" target="_blank"
+            class="w-9 h-9 rounded-full bg-slate-900/80 border border-slate-700 flex items-center justify-center transition">
             <i class="fab fa-github text-sm"></i>
           </a>
-          <a href="https://www.linkedin.com/in/vivek-sawji-050a942b8" target="_blank" class="w-9 h-9 rounded-full bg-slate-900/80 border border-slate-700 flex items-center justify-center transition">
+          <a href="https://www.linkedin.com/in/vivek-sawji-050a942b8" target="_blank"
+            class="w-9 h-9 rounded-full bg-slate-900/80 border border-slate-700 flex items-center justify-center transition">
             <i class="fab fa-linkedin-in text-sm"></i>
           </a>
-          <a href="https://twitter.com/viveksawji" target="_blank" class="w-9 h-9 rounded-full bg-slate-900/80 border border-slate-700 flex items-center justify-center transition">
+          <a href="https://twitter.com/viveksawji" target="_blank"
+            class="w-9 h-9 rounded-full bg-slate-900/80 border border-slate-700 flex items-center justify-center transition">
             <i class="fab fa-twitter text-sm"></i>
           </a>
-          <a href="https://instagram.com/vivekx___" target="_blank" class="w-9 h-9 rounded-full bg-slate-900/80 border border-slate-700 flex items-center justify-center transition">
+          <a href="https://instagram.com/vivekx___" target="_blank"
+            class="w-9 h-9 rounded-full bg-slate-900/80 border border-slate-700 flex items-center justify-center transition">
             <i class="fab fa-instagram text-sm"></i>
           </a>
         </div>
 
         <p>© 2025 Vivek Sawji. All rights reserved.</p>
         <p class="text-[11px] text-slate-500">
-          Crafted with <span class="text-cyan-300">❤️</span>, GSAP, Tailwind and late‑night caffeine.
+          Crafted with <span class="text-\[#FFD700\]">❤️</span>, GSAP, Tailwind and late‑night caffeine.
         </p>
       </div>
     </div>
@@ -2088,14 +1852,14 @@
     particlesJS('particles-js', {
       particles: {
         number: { value: 90 },
-        color: { value: '#06b6d4' },
+        color: { value: '#FFD700' },
         shape: { type: 'circle' },
         opacity: { value: 0.35, random: true },
         size: { value: 3, random: true },
         line_linked: {
           enable: true,
           distance: 140,
-          color: '#22d3ee',
+          color: '#FFD700',
           opacity: 0.32,
           width: 1
         },
@@ -2167,9 +1931,9 @@
     function updateGreeting() {
       const greetingElement = document.getElementById('greetingMessage');
       const currentHour = new Date().getHours();
-      
+
       let greeting = '';
-      
+
       if (currentHour >= 5 && currentHour < 12) {
         greeting = 'GOOD MORNING';
       } else if (currentHour >= 12 && currentHour < 17) {
@@ -2179,15 +1943,15 @@
       } else {
         greeting = 'GOOD NIGHT';
       }
-      
+
       if (greetingElement) {
         greetingElement.textContent = greeting;
       }
     }
-    
+
     // Update greeting on page load
     updateGreeting();
-    
+
     // Update greeting every minute
     setInterval(updateGreeting, 60000);
 
@@ -2342,7 +2106,7 @@
       <input type="password" id="passwordInput" placeholder="Enter password"
         class="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:border-blue-500 focus:outline-none mb-4 text-lg">
       <button onclick="checkPassword()"
-        class="w-full bg-gradient-to-r from-blue-500 to-cyan-600 text-white py-3 rounded-xl font-semibold text-lg transition-transform">
+        class="w-full bg-gradient-to-r from-blue-500 to-\[#FFD700\] text-white py-3 rounded-xl font-semibold text-lg transition-transform">
         Access Dashboard
       </button>
       <p id="errorMessage" class="text-red-500 text-sm mt-3 text-center"></p>
@@ -2350,7 +2114,8 @@
   </div>
 
   <!-- Admin Dashboard -->
-  <div id="adminPanel" class="fixed inset-0 bg-gradient-to-br from-blue-50 to-cyan-50 hidden overflow-y-auto z-[99999]">
+  <div id="adminPanel"
+    class="fixed inset-0 bg-gradient-to-br from-blue-50 to-\[#FFD700\]/10 hidden overflow-y-auto z-[99999]">
     <div class="min-h-screen p-4 md:p-8">
       <div class="max-w-7xl mx-auto">
 
@@ -2358,7 +2123,8 @@
         <div class="bg-white rounded-2xl shadow-xl p-6 mb-6 animate-fade-in">
           <div class="flex justify-between items-center">
             <div>
-              <h1 class="text-4xl font-bold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
+              <h1
+                class="text-4xl font-bold bg-gradient-to-r from-\[#0a1e42\] to-\[#FFD700\] bg-clip-text text-transparent">
                 📊 Analytics Dashboard
               </h1>
               <p class="text-gray-600 mt-2">Real-time website analytics & visitor insights</p>
@@ -2401,10 +2167,11 @@
           <div class="bg-white rounded-2xl shadow-xl p-6 transition-shadow animate-fade-in">
             <div class="flex items-center justify-between mb-4">
               <div class="text-4xl">📈</div>
-              <div class="bg-cyan-100 text-cyan-600 px-3 py-1 rounded-full text-sm font-semibold">All Time</div>
+              <div class="bg-\[#FFD700\]/20 text-\[#FFD700\] px-3 py-1 rounded-full text-sm font-semibold">All Time
+              </div>
             </div>
             <p class="text-gray-600 text-sm uppercase tracking-wider mb-2">Total Visits</p>
-            <p class="text-4xl font-bold text-cyan-600" id="totalUsers">0</p>
+            <p class="text-4xl font-bold text-\[#FFD700\]" id="totalUsers">0</p>
           </div>
 
           <!-- New vs Returning -->
@@ -2814,28 +2581,6 @@
         const html = `
       <div class="bg-red-50 p-4 rounded-xl text-center">
         <p class="text-3xl font-bold text-red-600">${totalClicks}</p>
-        <p class="text-sm text-gray-600">Total Clicks</p>
-      </div>
-      <div class="bg-orange-50 p-4 rounded-xl text-center">
-        <p class="text-3xl font-bold text-orange-600">${uniquePages}</p>
-        <p class="text-sm text-gray-600">Pages Tracked</p>
-      </div>
-      <div class="bg-pink-50 p-4 rounded-xl text-center">
-        <p class="text-3xl font-bold text-pink-600">${clicks.length > 0 ? 'Active' : 'Inactive'}</p>
-        <p class="text-sm text-gray-600">Heatmap Status</p>
-      </div>
-    `;
-        document.getElementById("heatmapStats").innerHTML = html;
-      }
-
-      // Toggle heatmap
-      window.toggleHeatmap = function () {
-        heatmapEnabled = !heatmapEnabled;
-        const overlay = document.getElementById("heatmapOverlay");
-        const btn = document.getElementById("heatmapBtn");
-
-        if (heatmapEnabled) {
-          overlay.style.display = "block";
           btn.textContent = "Hide Heatmap";
           btn.classList.add("bg-gray-500");
           btn.classList.remove("from-red-500", "to-pink-600");
@@ -2886,7 +2631,8 @@
   </script>
 
   <!-- ================= END ANALYTICS CODE ================= -->
+
+
 </body>
 
 </html>
-
